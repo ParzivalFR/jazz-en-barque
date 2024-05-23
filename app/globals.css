@@ -17,6 +17,7 @@
 @layer utilities {
   body {
     overflow-x: hidden;
+    background-color: var(--background);
   }
 
   .text-balance {
