@@ -8,7 +8,7 @@ export default function Header({ src }) {
         <Image
           src={src}
           alt="Logo Jazz en Barque"
-          className="w-full object-cover"
+          className="w-full lg:h-svh object-cover"
         />
       </div>
       <div className="absolute top-5 right-5">
