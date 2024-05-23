@@ -7,12 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        background: "var(--background)",
+        darkblue: "var(--dark-blue)",
+        darkpurple: "var(--dark-purple)",
+        lightblue: "var(--light-blue)",
+        orange: "var(--orange)",
+        otherorange: "var(--other-orange)",
+        yellow: "var(--yellow)",
       },
     },
+    boxShadow: { pxl: "rgba(100, 100, 100, 0.1) 0px 5px 15px 0px" },
   },
   plugins: [],
 };
