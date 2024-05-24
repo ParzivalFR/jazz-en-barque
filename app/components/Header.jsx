@@ -8,6 +8,8 @@ export default function Header({ src }) {
         <Image
           src={src}
           alt="Logo Jazz en Barque"
+          width={1920}
+          height={1080}
           className="w-full lg:h-svh object-cover"
         />
       </div>

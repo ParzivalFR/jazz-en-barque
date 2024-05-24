@@ -5,7 +5,7 @@ import Cushion from "../icons/cushion.png";
 
 const Boarding = () => {
   return (
-    <section className="flex flex-col items-center gap-6 w-full h-auto bg-background py-20 px-4">
+    <section className="wave-background flex flex-col items-center gap-6 w-full h-auto bg-background py-20 px-4">
       <div className="flex flex-col items-center gap-6">
         <h2 className="text-yellow text-4xl">Embarquez !</h2>
         <p className="text-xs">

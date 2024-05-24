@@ -10,7 +10,7 @@ import RDV from "../images/rdv.svg";
 
 const BottomHome = () => {
   return (
-    <section className="w-full h-full bg-background px-6">
+    <section className="w-full bg-background px-6">
       <div className="relative max-w-[600px] m-auto ">
         <Image
           src={ImageHome}

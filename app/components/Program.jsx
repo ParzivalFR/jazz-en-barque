@@ -11,7 +11,7 @@ import { IoMdMusicalNote } from "react-icons/io";
 
 const Program = () => {
   return (
-    <section className=" flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
+    <section className="wave-blue flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
       <div className="flex flex-col items-center text-background pt-20 gap-4">
         <h1 className="text-4xl">PROGRAMME 2024</h1>
         <p className="text-justify">
