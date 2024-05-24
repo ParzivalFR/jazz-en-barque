@@ -6,11 +6,11 @@ const Footer = () => {
   return (
     <footer>
       <div className="w-full p-6 bg-darkblue flex justify-center items-center flex-col gap-4">
-        <p className="text-center text-background text-base md:text-2xl">
+        <p className="text-center text-background text-base md:text-xl">
           © {currentYear} Jazz en Barque
         </p>
         <hr className="h-px border-background w-24" />
-        <p className="text-background">
+        <p className="text-background text-sm">
           Created with ❤️ by{" "}
           <Link
             href="https://parzival-portfolio.vercel.app"

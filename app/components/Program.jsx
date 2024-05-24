@@ -8,6 +8,7 @@ import Mask from "@/app/icons/mask.png";
 import Musician from "@/app/icons/musician.png";
 import Image from "next/image";
 import { IoMdMusicalNote } from "react-icons/io";
+import { londrina } from "../fonts";
 
 const Program = () => {
   const programData = [
@@ -65,7 +66,9 @@ const Program = () => {
   return (
     <section className="wave-blue flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
       <div className="flex flex-col items-center text-background pt-20 gap-4">
-        <h1 className="text-4xl lg:text-8xl">PROGRAMME 2024</h1>
+        <h1 className={`text-4xl lg:text-8xl ${londrina.className}`}>
+          PROGRAMME 2024
+        </h1>
         <p className="text-justify lg:text-xl">
           Il est maintenant temps de vous présenter votre embarcation :
         </p>
@@ -77,12 +80,10 @@ const Program = () => {
               key={item.time}
               className="flex justify-between items-center gap-7 lg:gap-20"
             >
-              <Image
-                src={item.icon}
-                alt={item.title} // Add aria-label for accessibility
-                className="w-8 lg:w-12"
-              />
-              <h4 className="text-background text-lg font-bold lg:text-3xl">
+              <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
+              <h4
+                className={`text-background text-lg font-bold lg:text-3xl ${londrina.className}`}
+              >
                 {item.time}
               </h4>
             </div>

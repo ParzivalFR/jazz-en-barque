@@ -1,5 +1,6 @@
 import BoatDescription from "@/public/boatDescription";
 import Image from "next/image";
+import { londrina } from "../fonts";
 import Cushion from "../icons/cushion.png";
 import FleureBleu from "../icons/fleure_bleu.svg";
 import LittleBoat from "../icons/petit_bateau.svg";
@@ -8,14 +9,18 @@ import BoatWithLign from "../images/boat.png";
 const BoardingLarge = () => {
   return (
     <section className="wave-background flex flex-col items-center gap-6 lg:gap-16 w-full h-auto bg-background py-20 px-4">
-      <div className="absolute -top-24 left-0">
-        <Image src={FleureBleu} alt="Fleur bleu" width={50} height={50} />
+      <div className="absolute -top-36 left-0">
+        <Image src={FleureBleu} alt="Fleur bleu" width={100} height={100} />
       </div>
       <div className="absolute -top-28 -right-2">
-        <Image src={LittleBoat} alt="Petit bateau" width={50} height={50} />
+        <Image src={LittleBoat} alt="Petit bateau" width={90} height={90} />
       </div>
       <div className="flex flex-col items-center gap-6 lg:gap-8">
-        <h2 className="text-yellow text-4xl lg:text-8xl">Embarquez !</h2>
+        <h2
+          className={`text-yellow text-4xl lg:text-8xl ${londrina.className}`}
+        >
+          Embarquez !
+        </h2>
         <p className="text-xs lg:text-base">
           Il est maintenant temps de vous présenter votre embarcation :
         </p>

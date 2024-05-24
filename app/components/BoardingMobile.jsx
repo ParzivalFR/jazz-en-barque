@@ -1,9 +1,10 @@
 import BoatDescription from "@/public/boatDescription";
 import Image from "next/image";
-import BoatWithoutLign from "../images/boat_without_lign.png";
-import LittleBoat from "../icons/petit_bateau.svg";
-import FleureBleu from "../icons/fleure_bleu.svg";
+import { londrina } from "../fonts";
 import Cushion from "../icons/cushion.png";
+import FleureBleu from "../icons/fleure_bleu.svg";
+import LittleBoat from "../icons/petit_bateau.svg";
+import BoatWithoutLign from "../images/boat_without_lign.png";
 
 const BoardingMobile = () => {
   return (
@@ -15,7 +16,9 @@ const BoardingMobile = () => {
         <Image src={LittleBoat} alt="Petit bateau" width={50} height={50} />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <h2 className="text-yellow text-4xl">Embarquez !</h2>
+        <h2 className={`text-yellow text-4xl ${londrina.className}`}>
+          Embarquez !
+        </h2>
         <p className="text-xs">
           Il est maintenant temps de vous présenter votre embarcation :
         </p>

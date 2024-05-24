@@ -5,6 +5,7 @@ import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 import Spacing from "./Spacing";
+import { londrina } from "../fonts";
 
 export default function BurgerMenu() {
   const [open, setOpen] = useState(false);
@@ -68,7 +69,7 @@ export default function BurgerMenu() {
 /* Logic*/
 const style = {
   container: `flex flex-col gap-5 relative top-20 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[1000]`,
-  item: `text-3xl text-white cursor-pointer hover:text-background transition-colors duration-700 ease-in-out`,
+  item: `text-3xl text-white cursor-pointer hover:text-background transition-colors duration-700 ease-in-out ${londrina.className}`,
   menu: {
     open: `h-full w-full `,
     close: `w-0 h-full`,

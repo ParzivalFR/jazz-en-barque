@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { RxDividerHorizontal } from "react-icons/rx";
+import { londrina } from "../fonts";
 import BleLeft from "../icons/ble-left.svg";
 import BleRight from "../icons/ble-right.svg";
 import Star1 from "../icons/star-1.svg";
@@ -13,7 +14,9 @@ const Competition = () => {
       <div className="relative w-full p-4 pt-20 sm:px-20 flex flex-col gap-6 bg-lightblue rounded-2xl lg:w-3/5">
         <div className="absolute -top-12 right-1/2 translate-x-1/2 w-60">
           <div className="relative z-20 clip-path-polygone w-60 h-24 border bg-otherorange">
-            <h2 className="text-4xl text-center">CONCOURS</h2>
+            <h2 className={`text-4xl text-center ${londrina.className}`}>
+              CONCOURS
+            </h2>
           </div>
           <div className="absolute z-10 top-2 right-2 clip-path-polygone w-60 h-24 border bg-yellow"></div>
         </div>
@@ -23,7 +26,7 @@ const Competition = () => {
         </p>
         <div className="flex justify-center items-center gap-5">
           <RxDividerHorizontal className="text-5xl text-black" />
-          <h3>Artistes et groupes musicaux </h3>
+          <h3 className={londrina.className}>Artistes et groupes musicaux </h3>
           <RxDividerHorizontal className="text-5xl text-black" />
         </div>
         <div className="w-full flex flex-col justify-start gap-2">

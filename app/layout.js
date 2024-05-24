@@ -1,18 +1,6 @@
-import { Jost, Londrina_Solid } from "next/font/google";
 import "./globals.css";
 import { WindowSizeProvider } from "./hooks/WindowSizeContext";
-
-const jost = Jost({
-  weight: "100",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const londrina_solid = Londrina_Solid({
-  weight: "300",
-  subsets: ["latin"],
-  display: "swap",
-});
+import { jost } from "./fonts";
 
 export const metadata = {
   title: "JEB - Embarquez !",
@@ -23,9 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <WindowSizeProvider>
-        <body className={(jost.className, londrina_solid.className)}>
-          {children}
-        </body>
+        <body className={jost.className}>{children}</body>
       </WindowSizeProvider>
     </html>
   );
