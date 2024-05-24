@@ -13,7 +13,7 @@ export default function Header({ src }) {
           height={1080}
           className="w-full object-cover"
         />
-        <div className="absolute z-10 right-1/2 translate-x-1/2 bottom-1/2 translate-y-1/2">
+        <div className="absolute z-10 right-1/2 translate-x-1/2 bottom-1/3 md:bottom-1/2 translate-y-1/2">
           <Image
             src={Logo}
             alt="Logo"

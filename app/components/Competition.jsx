@@ -6,7 +6,7 @@ import Spacing from "./Spacing";
 
 const Competition = () => {
   return (
-    <section className="h-full w-full bg-background flex flex-col items-center">
+    <section className="h-full w-full bg-background flex flex-col items-center px-4">
       <div className="relative h-full w-full sm:w-4/5">
         <div className="relative w-60 m-auto">
           <div className="relative z-20 clip-path-polygone w-60 h-24 border bg-otherorange">

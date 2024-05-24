@@ -10,6 +10,58 @@ import Image from "next/image";
 import { IoMdMusicalNote } from "react-icons/io";
 
 const Program = () => {
+  const programData = [
+    {
+      icon: LongFlag,
+      time: "15:30",
+      title: "Accueil",
+    },
+    {
+      icon: Mask,
+      time: "17:00",
+      title: "Lancement de la parade",
+      description: (
+        <IoMdMusicalNote className="text-md rotate-12 text-background/80" />
+      ),
+    },
+    {
+      icon: FlagGo,
+      time: "18:00",
+      title: "Départ de la course en barque",
+    },
+    {
+      icon: Cocktail,
+      time: "18:30",
+      title: "Apéritif",
+    },
+    {
+      icon: Chichi,
+      time: "19:00",
+      title: "Diner",
+    },
+    {
+      icon: Boat,
+      time: "20:15",
+      title: "Mise en barque",
+    },
+    {
+      icon: Musician,
+      time: "20:30",
+      title: "Concert",
+      description: (
+        <IoMdMusicalNote className="text-md -rotate-45 text-background/80" />
+      ),
+    },
+    {
+      icon: Dj,
+      time: "22:30",
+      title: "Dancefloor avec Dj",
+      description: (
+        <IoMdMusicalNote className="text-md rotate-45 text-background/80" />
+      ),
+    },
+  ];
+
   return (
     <section className="wave-blue flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
       <div className="flex flex-col items-center text-background pt-20 gap-4">
@@ -19,65 +71,23 @@ const Program = () => {
         </p>
       </div>
       <div className="flex flex-col p-2 sm:gap-2 md:gap-4">
-        <div className="flex justify-between items-center gap-7">
-          <Image src={LongFlag} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">15:30</h4>
-          <div className="w-full text-start">
-            <p className="text-background">Accueil</p>
+        {programData.map((item) => (
+          <div
+            key={item.time}
+            className="flex justify-between items-center gap-7"
+          >
+            <Image
+              src={item.icon}
+              alt={item.title} // Add aria-label for accessibility
+              className="w-8"
+            />
+            <h4 className="text-background text-lg font-bold">{item.time}</h4>
+            <div className="w-full flex justify-start items-center gap-1">
+              <p className="text-background">{item.title}</p>
+              {item.description && item.description}
+            </div>
           </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={Mask} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">17:00</h4>
-          <div className="w-full flex justify-start items-center gap-1">
-            <p className="text-background">Lancement de la parade</p>
-            <IoMdMusicalNote className="text-md rotate-12 text-background/80" />
-          </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={FlagGo} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">18:00</h4>
-          <div className="w-full text-start">
-            <p className="text-background">Départ de la course en barque</p>
-          </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={Cocktail} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">18:30</h4>
-          <div className="w-full text-start">
-            <p className="text-background">Apéritif</p>
-          </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={Chichi} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">19:00</h4>
-          <div className="w-full text-start">
-            <p className="text-background">Diner</p>
-          </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={Boat} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">20:15</h4>
-          <div className="w-full text-start">
-            <p className="text-background">Mise en barque</p>
-          </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={Musician} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">20:30</h4>
-          <div className="w-full flex justify-start items-center gap-1">
-            <p className="text-background">Concert</p>
-            <IoMdMusicalNote className="text-md -rotate-45 text-background/80" />
-          </div>
-        </div>
-        <div className="flex justify-between items-center gap-7">
-          <Image src={Dj} alt="" className="w-8" />
-          <h4 className="text-background text-lg font-bold">22:30</h4>
-          <div className="w-full flex justify-start items-center gap-1">
-            <p className="text-background">Dancefloor avec Dj</p>
-            <IoMdMusicalNote className="text-md rotate-45 text-background/80" />
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
