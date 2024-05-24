@@ -68,8 +68,8 @@
 
   @media (min-width: 1440px) {
     .wave-blue::before {
-      height: 800px; /* Augmenter la hauteur ici */
-      top: -600px; /* Assurez-vous que cela correspond à la nouvelle hauteur */
+      height: 600px; /* Augmenter la hauteur ici */
+      top: -450px; /* Assurez-vous que cela correspond à la nouvelle hauteur */
       background-position: 90vw bottom;
       background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 600' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 200L50 184C100 168 200 136 300 100C400 64 500 -20 600 4C700 28 800 148 900 196C1000 244 1100 220 1150 208L1200 200V500H0V200Z' fill='%230f3157'/></svg>");
     }

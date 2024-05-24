@@ -1,11 +1,19 @@
 import BoatDescription from "@/public/boatDescription";
 import Image from "next/image";
 import BoatWithoutLign from "../images/boat_without_lign.png";
+import LittleBoat from "../icons/petit_bateau.svg";
+import FleureBleu from "../icons/fleure_bleu.svg";
 import Cushion from "../icons/cushion.png";
 
-const Boarding = () => {
+const BoardingMobile = () => {
   return (
     <section className="wave-background flex flex-col items-center gap-6 w-full h-auto bg-background py-20 px-4">
+      <div className="absolute -top-24 left-0">
+        <Image src={FleureBleu} alt="Fleur bleu" width={50} height={50} />
+      </div>
+      <div className="absolute -top-28 -right-2">
+        <Image src={LittleBoat} alt="Petit bateau" width={50} height={50} />
+      </div>
       <div className="flex flex-col items-center gap-6">
         <h2 className="text-yellow text-4xl">Embarquez !</h2>
         <p className="text-xs">
@@ -46,4 +54,4 @@ const Boarding = () => {
   );
 };
 
-export default Boarding;
+export default BoardingMobile;

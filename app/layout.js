@@ -21,12 +21,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <WindowSizeProvider>
-      <html lang="fr">
+    <html lang="fr">
+      <WindowSizeProvider>
         <body className={(jost.className, londrina_solid.className)}>
           {children}
         </body>
-      </html>
-    </WindowSizeProvider>
+      </WindowSizeProvider>
+    </html>
   );
 }

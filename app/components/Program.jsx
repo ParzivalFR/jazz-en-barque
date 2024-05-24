@@ -21,7 +21,7 @@ const Program = () => {
       time: "17:00",
       title: "Lancement de la parade",
       description: (
-        <IoMdMusicalNote className="text-md rotate-12 text-background/80" />
+        <IoMdMusicalNote className="text-md rotate-12 text-background/80 lg:text-4xl " />
       ),
     },
     {
@@ -49,7 +49,7 @@ const Program = () => {
       time: "20:30",
       title: "Concert",
       description: (
-        <IoMdMusicalNote className="text-md -rotate-45 text-background/80" />
+        <IoMdMusicalNote className="text-md -rotate-45 text-background/80 lg:text-4xl " />
       ),
     },
     {
@@ -57,7 +57,7 @@ const Program = () => {
       time: "22:30",
       title: "Dancefloor avec Dj",
       description: (
-        <IoMdMusicalNote className="text-md rotate-45 text-background/80" />
+        <IoMdMusicalNote className="text-md rotate-45 text-background/80 lg:text-4xl " />
       ),
     },
   ];
@@ -65,8 +65,8 @@ const Program = () => {
   return (
     <section className="wave-blue flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
       <div className="flex flex-col items-center text-background pt-20 gap-4">
-        <h1 className="text-4xl">PROGRAMME 2024</h1>
-        <p className="text-justify">
+        <h1 className="text-4xl lg:text-8xl">PROGRAMME 2024</h1>
+        <p className="text-justify lg:text-xl">
           Il est maintenant temps de vous présenter votre embarcation :
         </p>
       </div>
@@ -74,16 +74,18 @@ const Program = () => {
         {programData.map((item) => (
           <div
             key={item.time}
-            className="flex justify-between items-center gap-7"
+            className="flex justify-between items-center gap-7 lg:gap-20"
           >
             <Image
               src={item.icon}
               alt={item.title} // Add aria-label for accessibility
-              className="w-8"
+              className="w-8 lg:w-12"
             />
-            <h4 className="text-background text-lg font-bold">{item.time}</h4>
-            <div className="w-full flex justify-start items-center gap-1">
-              <p className="text-background">{item.title}</p>
+            <h4 className="text-background text-lg font-bold lg:text-3xl">
+              {item.time}
+            </h4>
+            <div className="w-full flex justify-start items-center gap-1 lg:gap-2">
+              <p className="text-background lg:text-2xl">{item.title}</p>
               {item.description && item.description}
             </div>
           </div>

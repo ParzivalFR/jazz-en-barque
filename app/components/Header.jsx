@@ -4,8 +4,8 @@ import BurgerMenu from "./BurgerMenu";
 
 export default function Header({ src }) {
   return (
-    <header className="w-full bg-white">
-      <div className="w-full relative">
+    <header className="w-full">
+      <div className="w-full xl:h-svh relative">
         <Image
           src={src}
           alt="Image du festival Jazz en Barque"
