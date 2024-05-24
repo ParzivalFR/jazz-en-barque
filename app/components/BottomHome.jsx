@@ -6,7 +6,7 @@ import Bottom4 from "../icons/bottom_4.svg";
 import Bottom5 from "../icons/bottom_5.svg";
 import Bottom6 from "../icons/bottom_6.svg";
 import ImageHome from "../images/page_home.webp";
-import RDV from "../images/rdv.svg";
+import RDV from "../icons/rdv.svg";
 
 const BottomHome = () => {
   return (

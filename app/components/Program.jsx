@@ -70,23 +70,25 @@ const Program = () => {
           Il est maintenant temps de vous présenter votre embarcation :
         </p>
       </div>
-      <div className="flex flex-col p-2 sm:gap-2 md:gap-4">
+      <div className="flex flex-col max-w-[800px] p-2 sm:gap-2 md:gap-4">
         {programData.map((item) => (
-          <div
-            key={item.time}
-            className="flex justify-between items-center gap-7 lg:gap-20"
-          >
-            <Image
-              src={item.icon}
-              alt={item.title} // Add aria-label for accessibility
-              className="w-8 lg:w-12"
-            />
-            <h4 className="text-background text-lg font-bold lg:text-3xl">
-              {item.time}
-            </h4>
-            <div className="w-full flex justify-start items-center gap-1 lg:gap-2">
-              <p className="text-background lg:text-2xl">{item.title}</p>
+          <div className="flex flex-row justify-between gap-24 md:gap-64 ">
+            <div
+              key={item.time}
+              className="flex justify-between items-center gap-7 lg:gap-20"
+            >
+              <Image
+                src={item.icon}
+                alt={item.title} // Add aria-label for accessibility
+                className="w-8 lg:w-12"
+              />
+              <h4 className="text-background text-lg font-bold lg:text-3xl">
+                {item.time}
+              </h4>
+            </div>
+            <div className="w-full flex justify-end items-center gap-1 lg:gap-2">
               {item.description && item.description}
+              <p className="text-background lg:text-2xl">{item.title}</p>
             </div>
           </div>
         ))}
