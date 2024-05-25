@@ -2,9 +2,9 @@ import Logo from "@/public/logo.png";
 import Image from "next/image";
 import BurgerMenu from "./BurgerMenu";
 
-export default function Header({ src }) {
+export default function Header({ src, className, width, height }) {
   return (
-    <header className="w-full">
+    <header className="relative w-full">
       <div className="w-full xl:h-svh relative">
         <Image
           src={src}
@@ -13,12 +13,12 @@ export default function Header({ src }) {
           height={1080}
           className="w-full object-cover"
         />
-        <div className="absolute z-10 right-1/2 translate-x-1/2 bottom-1/3 md:bottom-1/2 translate-y-1/2">
+        <div className={className}>
           <Image
             src={Logo}
             alt="Logo"
-            width={300}
-            height={300}
+            width={width}
+            height={height}
             className="w-40 sm:w-60 lg:w-80"
           />
         </div>

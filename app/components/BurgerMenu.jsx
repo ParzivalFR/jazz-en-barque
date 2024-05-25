@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
-import Spacing from "./Spacing";
 import { londrina } from "../fonts";
+import Spacing from "./Spacing";
 
 export default function BurgerMenu() {
   const [open, setOpen] = useState(false);
@@ -48,16 +48,16 @@ export default function BurgerMenu() {
           <MenuItem href="/" onClick={toggle}>
             Accueil
           </MenuItem>
-          <MenuItem href="/informations" onClick={toggle}>
+          <MenuItem href="/pages/informations" onClick={toggle}>
             Infos Pratiques
           </MenuItem>
-          <MenuItem href="/history" onClick={toggle}>
+          <MenuItem href="/pages/history" onClick={toggle}>
             Notre Histoire
           </MenuItem>
-          <MenuItem href="/previous" onClick={toggle}>
+          <MenuItem href="/pages/previous" onClick={toggle}>
             Editions Précédentes
           </MenuItem>
-          <MenuItem href="/contact" onClick={toggle}>
+          <MenuItem href="/pages/contact" onClick={toggle}>
             Contact
           </MenuItem>
         </MenuContainer>

@@ -66,7 +66,9 @@ const Program = () => {
   return (
     <section className="wave-blue flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
       <div className="flex flex-col items-center text-background pt-20 gap-4">
-        <h1 className={`text-4xl lg:text-8xl ${londrina.className}`}>
+        <h1
+          className={`text-4xl sm:text-6xl lg:text-8xl ${londrina.className}`}
+        >
           PROGRAMME 2024
         </h1>
         <p className="text-justify lg:text-xl">
@@ -75,11 +77,11 @@ const Program = () => {
       </div>
       <div className="flex flex-col max-w-[800px] p-2 sm:gap-2 md:gap-4">
         {programData.map((item) => (
-          <div className="flex flex-row justify-between gap-24 md:gap-64 ">
-            <div
-              key={item.time}
-              className="flex justify-between items-center gap-7 lg:gap-20"
-            >
+          <div
+            key={item.time}
+            className="flex flex-row justify-between gap-16 sm:gap-20 md:gap-64 "
+          >
+            <div className="flex justify-between items-center gap-7 lg:gap-20">
               <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
               <h4
                 className={`text-background text-lg font-bold lg:text-3xl ${londrina.className}`}
@@ -89,7 +91,9 @@ const Program = () => {
             </div>
             <div className="w-full flex justify-end items-center gap-1 lg:gap-2">
               {item.description && item.description}
-              <p className="text-background lg:text-2xl">{item.title}</p>
+              <p className="text-background text-end text-sm sm:text-base lg:text-2xl">
+                {item.title}
+              </p>
             </div>
           </div>
         ))}
