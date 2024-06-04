@@ -42,6 +42,7 @@ export default function BurgerMenu() {
               alt="Logo de Jazz En Barque"
               width={200}
               height={200}
+              className="w-40 sm:w-52 "
             />
           </div>
           <Spacing size={10} />
@@ -69,7 +70,7 @@ export default function BurgerMenu() {
 /* Logic*/
 const style = {
   container: `flex flex-col gap-5 relative top-20 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[1000]`,
-  item: `text-3xl text-white cursor-pointer hover:text-background transition-colors duration-700 ease-in-out ${londrina.className}`,
+  item: `text-3xl text-white cursor-pointer transition-all hover:text-background duration-700 ease-in-out ${londrina.className}`,
   menu: {
     open: `h-full w-full`,
     close: `w-0 h-full`,

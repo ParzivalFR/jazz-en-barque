@@ -1,8 +1,9 @@
+import ImgFish from "@/app/icons/fish.svg";
 import ImgCouple from "@/app/images/couple.webp";
 import ImgFest from "@/app/images/fest.webp";
 import ImgPlace from "@/app/images/place.webp";
 import Image from "next/image";
-import ImgFish from "@/app/icons/fish.svg";
+import BlueLeaf from "@/app/icons/blue-leaf.svg";
 
 const FullHistory = () => {
   const details = [
@@ -38,11 +39,17 @@ const FullHistory = () => {
   ];
 
   return (
-    <section className="wave-background flex flex-col items-center gap-6 w-full h-auto bg-background pt-10 px-4">
-      <div>
+    <section className="md:relative wave-background flex flex-col items-center gap-6 w-full h-auto bg-background pt-10 px-4">
+      <div className="relative md:static">
         <h1 className="text-darkblue text-center text-4xl sm:text-6xl lg:text-8xl">
           Notre histoire
         </h1>
+        <Image
+          src={BlueLeaf}
+          width={80}
+          height={80}
+          className="absolute -top-8 -right-24 sm:-right-40 md:right-12 md:top-6 sm:w-24 md:w-32"
+        />
       </div>
       {details.map((detail, index) => (
         <div
