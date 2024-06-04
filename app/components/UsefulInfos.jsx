@@ -56,7 +56,7 @@ const UsefulInfos = () => {
           Infos pratiques
         </h1>
         <div className="flex flex-col gap-4 md:px-10 lg:px-20">
-          <h2 className="text-white text-2xl md:text-4xl">Se loger</h2>
+          <h2 className="text-2xl md:text-4xl">Se loger</h2>
           <p className="text-sm md:text-xl">
             Pour pouvoir profiter de la fête en toute sérénité, voici les
             solutions d’hebergement qui s’offrent à vous pour éviter un trajet
