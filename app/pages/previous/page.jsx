@@ -1,9 +1,8 @@
-import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import FullHistory from "@/app/components/FullHistory";
+import Header from "@/app/components/Header";
+import PreviousGallery from "@/app/components/PreviousGallery";
 import Spacing from "@/app/components/Spacing";
 import ImgPrevious from "@/app/images/previous-editions.webp";
-import PreviousGallery from "@/app/components/PreviousGallery";
 
 const page = () => {
   return (

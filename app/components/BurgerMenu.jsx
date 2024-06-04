@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
@@ -16,7 +17,7 @@ export default function BurgerMenu() {
 
   return (
     <>
-      <div className="relative z-10 bg-black h-auto rounded-full">
+      <div className="relative z-10  h-auto rounded-full">
         <button
           onClick={toggle}
           className="z-20 border border-black text-black flex justify-center items-center h-auto px-2 rounded-full bg-background hover:bg-orange transition-colors duration-500 ease-in-out"
@@ -30,7 +31,7 @@ export default function BurgerMenu() {
       <Menu open={open}>
         <button
           aria-label="Close"
-          className="absolute top-6 right-6 text-5xl text-black cursor-pointer transition-transform duration-700 ease-in-out hover:rotate-180"
+          className="absolute z-[910] top-6 right-6 text-5xl text-black cursor-pointer transition-transform duration-700 ease-in-out hover:rotate-180"
           onClick={toggle}
         >
           <MdOutlineClose className="bg-background border border-black p-1 rounded-full size-10 lg:size-18 text-black" />
@@ -69,11 +70,11 @@ export default function BurgerMenu() {
 
 /* Logic*/
 const style = {
-  container: `flex flex-col gap-5 relative top-20 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[1000]`,
+  container: `flex flex-col gap-5 relative top-10 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[900]`,
   item: `text-3xl text-white cursor-pointer transition-all hover:text-background duration-700 ease-in-out ${londrina.className}`,
   menu: {
-    open: `h-full w-full`,
-    close: `w-0 h-full`,
+    open: `h-svh w-full`,
+    close: `w-0 h-svh`,
     default: `overflow-hidden transition-all duration-700 fixed z-50 top-0 right-0 bg-darkblue`,
   },
 };
@@ -96,9 +97,9 @@ function MenuContainer({ children }) {
 function MenuItem({ children, href, onClick }) {
   return (
     <div className="p-2">
-      <a href={href} className={style.item} onClick={onClick}>
+      <Link href={href} className={style.item} onClick={onClick}>
         {children}
-      </a>
+      </Link>
     </div>
   );
 }

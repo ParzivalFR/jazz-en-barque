@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="w-full p-6 bg-darkblue flex justify-center items-center flex-col gap-4">
+      <div className="relative z-[20] w-full p-6 bg-darkblue flex justify-center items-center flex-col gap-4">
         <p className="text-center text-background text-base md:text-xl">
           © {currentYear} Jazz en Barque
         </p>
