@@ -72,27 +72,31 @@ const Housing = () => {
               alt={housing.title}
               width={200}
               height={200}
-              className={`md:w-72 lg:w-80  transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out`}
+              className={`md:w-64  transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out`}
             />
           )}
           <div className="flex flex-col justify-center items-center gap-4 lg:max-w-[500px]">
-            <h3 className="text-xl lg:text-3xl underline">{housing.title}</h3>
-            {housing.description && (
-              <ul className="text-sm px-10 flex flex-col gap-2">
-                {housing.description.map((descItem) => (
-                  <li key={descItem}>{descItem}</li>
-                ))}
-              </ul>
-            )}
+            <div className="flex flex-col justify-start gap-2 w-full">
+              <h3 className="text-xl lg:text-3xl font-semibold">
+                {housing.title}
+              </h3>
+              {housing.description && (
+                <ul className="text-sm md:text-base flex flex-col gap-2">
+                  {housing.description.map((descItem) => (
+                    <li key={descItem}>· {descItem}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
             {housing.content && (
               <div className="flex flex-col justify-center w-full  gap-4">
                 {housing.content.map((gite) => (
-                  <div key={gite.title} className="border rounded-lg p-4 gap-2">
+                  <div key={gite.title}>
                     <div className="flex justify-between items-center gap-4">
-                      <h5 className="text-center font-bold">{gite.title}</h5>
-                      <p className="bg-lightblue rounded-full px-2 text-sm text-center text-nowrap">
+                      <h5 className="text-start font-bold">{gite.title}</h5>
+                      <span className="bg-[#88B1E1] rounded-full px-2 text-sm text-center text-nowrap">
                         {gite.capacity}
-                      </p>
+                      </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <FiPhoneCall className="text-md" />

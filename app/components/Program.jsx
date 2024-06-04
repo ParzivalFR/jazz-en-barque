@@ -9,6 +9,7 @@ import Musician from "@/app/icons/musician.png";
 import Image from "next/image";
 import { IoMdMusicalNote } from "react-icons/io";
 import { londrina } from "../fonts";
+import ImgWaveRounded from "../icons/wave-rounded.svg";
 
 const Program = () => {
   const programData = [
@@ -64,7 +65,12 @@ const Program = () => {
   ];
 
   return (
-    <section className="wave-blue flex flex-col gap-16 items-center w-full bg-darkblue px-4 pb-24">
+    <section className="relative flex flex-col gap-16 items-center w-full bg-darkblue px-4 pb-52">
+      <Image
+        src={ImgWaveRounded}
+        alt="Vague"
+        className="absolute -top-12 sm:-top-24 md:-top-36 lg:-top-48 xl:-top-72 w-full"
+      />
       <div className="flex flex-col items-center text-background pt-20 gap-4">
         <h1
           className={`text-4xl sm:text-6xl lg:text-8xl ${londrina.className}`}

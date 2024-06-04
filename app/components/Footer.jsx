@@ -15,7 +15,7 @@ const Footer = () => {
           <Link
             href="https://www.gael-dev.fr/"
             target="_blank"
-            className=" text-indigo-500 hover:text-indigo-300 transition duration-500 ease-in-out"
+            className="font-bold hover:text-indigo-300 transition duration-500 ease-in-out"
           >
             Gael RICHARD
           </Link>

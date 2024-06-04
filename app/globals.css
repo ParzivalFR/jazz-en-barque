@@ -6,6 +6,7 @@
   :root {
     --background: hsl(34, 76%, 94%);
     --dark-blue: hsl(212, 70%, 20%);
+    --middle-blue: hsl(198.39, 83.78%, 14.51%);
     --light-blue: rgba(136, 177, 225, 0.3);
     --dark-purple: hsl(335, 56%, 15%);
     --orange: rgba(255, 185, 79, 0.31);

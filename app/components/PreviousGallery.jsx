@@ -24,6 +24,7 @@ import Image from "next/image";
 import { useState } from "react";
 import ImageModal from "./ImageModal";
 import Spacing from "./Spacing";
+import { londrina } from "../fonts";
 
 const PreviousGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -58,7 +59,9 @@ const PreviousGallery = () => {
 
   return (
     <section className="wave-background z-[20] flex flex-col items-center gap-20 w-full h-auto bg-background pt-10 px-4">
-      <h1 className="text-darkblue text-center text-4xl sm:text-6xl lg:text-8xl">
+      <h1
+        className={`${londrina.className} text-darkblue text-center text-4xl sm:text-6xl`}
+      >
         Editions précédentes
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

@@ -41,8 +41,8 @@ export default function BurgerMenu() {
             <Image
               src="/logo-1.png"
               alt="Logo de Jazz En Barque"
-              width={200}
-              height={200}
+              width={500}
+              height={500}
               className="w-40 sm:w-52 "
             />
           </div>
@@ -70,12 +70,12 @@ export default function BurgerMenu() {
 
 /* Logic*/
 const style = {
-  container: `flex flex-col gap-5 relative top-10 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[900]`,
-  item: `text-3xl text-white cursor-pointer transition-all hover:text-background duration-700 ease-in-out ${londrina.className}`,
+  container: `flex flex-col gap-8 relative top-10 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[900]`,
+  item: `px-4 md:p-10 text-3xl text-white cursor-pointer transition-all hover:text-background duration-700 ease-in-out ${londrina.className}`,
   menu: {
     open: `h-svh w-full`,
     close: `w-0 h-svh`,
-    default: `overflow-hidden transition-all duration-700 fixed z-50 top-0 right-0 bg-darkblue`,
+    default: `overflow-hidden transition-all duration-700 fixed z-50 top-0 right-0 bg-middleblue`,
   },
 };
 
@@ -96,7 +96,7 @@ function MenuContainer({ children }) {
 
 function MenuItem({ children, href, onClick }) {
   return (
-    <div className="p-2">
+    <div>
       <Link href={href} className={style.item} onClick={onClick}>
         {children}
       </Link>

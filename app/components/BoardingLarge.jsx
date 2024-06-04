@@ -6,7 +6,25 @@ import FleureBleu from "../icons/fleure_bleu.svg";
 import LittleBoat from "../icons/petit_bateau.svg";
 import BoatWithLign from "../images/boat.png";
 
+const DescriptionBlock = ({ description, position }) => (
+  <div
+    className={`absolute ${position} max-w-[300px] w-full text-start p-4 rounded-lg`}
+  >
+    <p className="text-lg">
+      <span className="font-bold">{description.title} :</span>
+      <br />
+      {description.content}
+    </p>
+  </div>
+);
+
 const BoardingLarge = () => {
+  const descriptions = [
+    { ...BoatDescription[0], position: "top-12 -left-48" },
+    { ...BoatDescription[1], position: "-top-8 -right-72" },
+    { ...BoatDescription[2], position: "bottom-4 -right-72" },
+  ];
+
   return (
     <section className="wave-background flex flex-col items-center gap-6 lg:gap-16 w-full h-auto bg-background py-20 px-4">
       <div className="absolute -top-36 left-0">
@@ -23,35 +41,20 @@ const BoardingLarge = () => {
           Il est maintenant temps de vous présenter votre embarcation :
         </p>
       </div>
-      <div className="relative ">
+      <div className="relative">
         <Image src={BoatWithLign} alt="Embarquement" width={500} height={500} />
-        {BoatDescription && (
-          <>
-            <div className="absolute top-12 -left-48 max-w-[200px] w-4/5 text-start p-4 rounded-lg">
-              <p className="text-lg">
-                <span className="font-bold">{BoatDescription[0].title} :</span>{" "}
-                {BoatDescription[0].content}
-              </p>
-            </div>
-            <div className="absolute -top-6 -right-48 max-w-[200px] w-4/5 text-start p-4 rounded-lg">
-              <p className="text-lg">
-                <span className="font-bold">{BoatDescription[1].title} :</span>{" "}
-                {BoatDescription[1].content}
-              </p>
-            </div>
-            <div className="absolute bottom-4 -right-48 max-w-[200px] w-4/5 text-start p-4 rounded-lg">
-              <p className="text-lg">
-                <span className="font-bold">{BoatDescription[2].title} :</span>{" "}
-                {BoatDescription[2].content}
-              </p>
-            </div>
-          </>
-        )}
+        {descriptions.map((desc, index) => (
+          <DescriptionBlock
+            key={index}
+            description={desc}
+            position={desc.position}
+          />
+        ))}
       </div>
       <div className="relative flex items-center gap-6 bg-orange bg-opacity-35 rounded-2xl p-4">
-        <Image src={Cushion} alt="Coussin" width={50} height={50} />
+        <Image src={Cushion} alt="Coussin" width={80} height={80} />
         <p className="text-base">
-          Pour votre confort, veillez à apporter une tenue adequat et des
+          Pour votre confort, veillez à apporter une tenue adéquate et des
           coussins !
         </p>
       </div>
