@@ -1,4 +1,4 @@
-import Logo from "@/public/logo.png";
+import Logo from "@/public/logo-1.png";
 import Image from "next/image";
 import BurgerMenu from "./BurgerMenu";
 

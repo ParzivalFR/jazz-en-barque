@@ -22,7 +22,7 @@ const Program = () => {
       time: "17:00",
       title: "Lancement de la parade",
       description: (
-        <IoMdMusicalNote className="text-md rotate-12 text-background/80 lg:text-4xl " />
+        <IoMdMusicalNote className="text-md rotate-12 text-white lg:text-4xl " />
       ),
     },
     {
@@ -50,7 +50,7 @@ const Program = () => {
       time: "20:30",
       title: "Concert",
       description: (
-        <IoMdMusicalNote className="text-md -rotate-45 text-background/80 lg:text-4xl " />
+        <IoMdMusicalNote className="text-md -rotate-45 text-white lg:text-4xl " />
       ),
     },
     {
@@ -58,28 +58,25 @@ const Program = () => {
       time: "22:30",
       title: "Dancefloor avec Dj",
       description: (
-        <IoMdMusicalNote className="text-md rotate-45 text-background/80 lg:text-4xl " />
+        <IoMdMusicalNote className="text-md rotate-45 text-white lg:text-4xl " />
       ),
     },
   ];
 
   return (
-    <section className="wave-blue flex flex-col gap-20 items-center w-full bg-darkblue px-4 pb-24">
+    <section className="wave-blue flex flex-col gap-16 items-center w-full bg-darkblue px-4 pb-24">
       <div className="flex flex-col items-center text-background pt-20 gap-4">
         <h1
           className={`text-4xl sm:text-6xl lg:text-8xl ${londrina.className}`}
         >
           PROGRAMME 2024
         </h1>
-        <p className="text-justify lg:text-xl">
-          Il est maintenant temps de vous présenter votre embarcation :
-        </p>
       </div>
-      <div className="flex flex-col max-w-[800px] p-2 sm:gap-2 md:gap-4">
+      <div className="flex flex-col justify-between max-w-[700px] sm:gap-2 md:gap-4">
         {programData.map((item) => (
           <div
             key={item.time}
-            className="flex flex-row justify-between gap-16 sm:gap-20 md:gap-64 "
+            className="flex flex-row justify-between gap-16 sm:gap-24 md:gap-32 lg:gap-56"
           >
             <div className="flex justify-between items-center gap-7 lg:gap-20">
               <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
@@ -89,11 +86,11 @@ const Program = () => {
                 {item.time}
               </h4>
             </div>
-            <div className="w-full flex justify-end items-center gap-1 lg:gap-2">
-              {item.description && item.description}
+            <div className="w-full flex justify-start items-center gap-1 lg:gap-2">
               <p className="text-background text-end text-sm sm:text-base lg:text-2xl">
                 {item.title}
               </p>
+              {item.description && item.description}
             </div>
           </div>
         ))}

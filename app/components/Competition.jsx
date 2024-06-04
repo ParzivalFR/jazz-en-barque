@@ -11,10 +11,12 @@ import Spacing from "./Spacing";
 const Competition = () => {
   return (
     <section className="w-full flex flex-col items-center px-4">
-      <div className="relative w-full p-4 pt-20 sm:px-20 flex flex-col gap-6 bg-lightblue rounded-2xl lg:w-3/5">
+      <div className="relative w-full  p-4 pt-20 sm:px-20 flex flex-col gap-6 bg-lightblue rounded-2xl md:w-3/5">
         <div className="absolute -top-12 right-1/2 translate-x-1/2 w-60">
           <div className="relative z-20 clip-path-polygone w-60 h-24 border bg-otherorange">
-            <h2 className={`text-4xl text-center ${londrina.className}`}>
+            <h2
+              className={`absolute top-[35%] text-4xl text-center ${londrina.className}`}
+            >
               CONCOURS
             </h2>
           </div>
@@ -26,7 +28,11 @@ const Competition = () => {
         </p>
         <div className="flex justify-center items-center gap-5">
           <RxDividerHorizontal className="text-5xl text-black" />
-          <h3 className={londrina.className}>Artistes et groupes musicaux </h3>
+          <h3
+            className={`text-xl lg:text-2xl text-center ${londrina.className}`}
+          >
+            Artistes et groupes musicaux{" "}
+          </h3>
           <RxDividerHorizontal className="text-5xl text-black" />
         </div>
         <div className="w-full flex flex-col justify-start gap-2">
@@ -40,7 +46,7 @@ const Competition = () => {
             </li>
           </ul>
         </div>
-        <Spacing size={60} />
+        <Spacing size={20} />
         <div className="flex items-center justify-center">
           <Image src={BleLeft} alt="Ble gauche" width={50} height={50} />
           <div className="w-1/3">

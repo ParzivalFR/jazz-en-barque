@@ -1,6 +1,7 @@
 import Caravane from "../images/caravane.png";
 import Gîte from "../images/gîte.png";
 import Tente from "../images/tente.png";
+import Address from "./Address";
 import Housing from "./Housing";
 import Spacing from "./Spacing";
 
@@ -49,12 +50,14 @@ const UsefulInfos = () => {
   ];
 
   return (
-    <section className="wave-background bg-background flex flex-col">
-      <div className="flex flex-col gap-16 px-4">
-        <h1 className="text-darkblue text-4xl text-center">Infos pratiques</h1>
-        <div className="flex flex-col gap-4">
-          <h2 className="text-2xl">Se loger</h2>
-          <p className="text-sm">
+    <section className="wave-background flex flex-col items-center gap-6 w-full h-auto bg-background pt-10 px-4">
+      <div className="flex flex-col gap-16 px-4 pt-10">
+        <h1 className="text-darkblue text-center text-4xl sm:text-6xl lg:text-8xl">
+          Infos pratiques
+        </h1>
+        <div className="flex flex-col gap-4 md:px-10 lg:px-20">
+          <h2 className="text-white text-2xl md:text-4xl">Se loger</h2>
+          <p className="text-sm md:text-xl">
             Pour pouvoir profiter de la fête en toute sérénité, voici les
             solutions d’hebergement qui s’offrent à vous pour éviter un trajet
             en pleine nuit après la fête.
@@ -63,6 +66,8 @@ const UsefulInfos = () => {
       </div>
       <Spacing size={50} />
       <Housing />
+      <Spacing size={50} />
+      <Address />
     </section>
   );
 };

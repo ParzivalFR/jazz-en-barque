@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { FiPhoneCall } from "react-icons/fi";
-import Caravane from "../images/caravane.png";
-import Gîte from "../images/gîte.png";
-import Tente from "../images/tente.png";
+import Caravane from "../images/caravane.svg";
+import Gîte from "../images/gite.svg";
+import Tente from "../images/tente.svg";
 
 const housingTypes = [
   {
@@ -60,20 +60,23 @@ const housingTypes = [
 
 const Housing = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="w-full h-auto md:w-4/5 xl:w-8/12 flex flex-col gap-8">
       {housingTypes.map((housing) => (
-        <div key={housing.title} className="flex flex-col items-center gap-4">
+        <div
+          key={housing.title}
+          className="w-full h-auto flex flex-col justify-between items-center gap-4 lg:flex-row"
+        >
           {housing.image && (
             <Image
               src={housing.image}
               alt={housing.title}
-              width={housing.imageWidth || 200}
-              height={housing.imageHeight || 200}
-              className="transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out"
+              width={200}
+              height={200}
+              className={`md:w-72 lg:w-80  transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out`}
             />
           )}
-          <div className="flex flex-col items-center gap-4">
-            <h3 className="text-xl underline">{housing.title}</h3>
+          <div className="flex flex-col justify-center items-center gap-4 lg:max-w-[500px]">
+            <h3 className="text-xl lg:text-3xl underline">{housing.title}</h3>
             {housing.description && (
               <ul className="text-sm px-10 flex flex-col gap-2">
                 {housing.description.map((descItem) => (
@@ -82,7 +85,7 @@ const Housing = () => {
               </ul>
             )}
             {housing.content && (
-              <div className="flex flex-col justify-center w-full max-w-[600px] gap-4">
+              <div className="flex flex-col justify-center w-full  gap-4">
                 {housing.content.map((gite) => (
                   <div key={gite.title} className="border rounded-lg p-4 gap-2">
                     <div className="flex justify-between items-center gap-4">

@@ -1,6 +1,6 @@
+import { jost } from "./fonts";
 import "./globals.css";
 import { WindowSizeProvider } from "./hooks/WindowSizeContext";
-import { jost } from "./fonts";
 
 export const metadata = {
   title: "JEB - Embarquez !",

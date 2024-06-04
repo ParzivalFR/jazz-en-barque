@@ -16,10 +16,12 @@ const BoardingMobile = () => {
         <Image src={LittleBoat} alt="Petit bateau" width={50} height={50} />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <h2 className={`text-yellow text-4xl ${londrina.className}`}>
+        <h2
+          className={`text-yellow text-6xl sm:text-8xl ${londrina.className}`}
+        >
           Embarquez !
         </h2>
-        <p className="text-xs">
+        <p className="text-xs sm:text-base md:text-lg">
           Il est maintenant temps de vous présenter votre embarcation :
         </p>
       </div>
@@ -35,7 +37,7 @@ const BoardingMobile = () => {
         {BoatDescription.map((description, index) => (
           <div
             key={index}
-            className="max-w-[300px] w-4/5 text-start p-4 bg-orange rounded-lg"
+            className="max-w-[400px] w-4/5 text-start p-4 bg-orange rounded-lg"
           >
             <p className="text-sm">
               <span className="font-bold">{description.title}:</span>{" "}
@@ -44,10 +46,14 @@ const BoardingMobile = () => {
           </div>
         ))}
       </div>
-      <hr className="border-yellow w-3/5 my-4" />
-      <div className="relative flex gap-6 bg-orange bg-opacity-35 rounded-2xl p-4">
-        <Image src={Cushion} alt="Coussin" width={50} height={50} />
-        <hr className="absolute top-10 left-14 rotate-90 w-10 bg-yellow" />
+      <div className="relative flex items-center gap-6 bg-orange bg-opacity-35 rounded-2xl p-4">
+        <Image
+          src={Cushion}
+          alt="Coussin"
+          width={80}
+          height={80}
+          className="size-auto"
+        />
         <p>
           Pour votre confort, veillez à apporter une tenue adequat et des
           coussins !

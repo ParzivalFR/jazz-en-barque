@@ -13,11 +13,11 @@ const Footer = () => {
         <p className="text-background text-sm">
           Created with ❤️ by{" "}
           <Link
-            href="https://parzival-portfolio.vercel.app"
+            href="https://www.gael-dev.fr/"
             target="_blank"
             className=" text-indigo-500 hover:text-indigo-300 transition duration-500 ease-in-out"
           >
-            Parzival
+            Gael RICHARD
           </Link>
           .
         </p>

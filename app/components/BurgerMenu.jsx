@@ -38,13 +38,13 @@ export default function BurgerMenu() {
         <MenuContainer>
           <div className="flex justify-center items-start">
             <Image
-              src="/logo.png"
+              src="/logo-1.png"
               alt="Logo de Jazz En Barque"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             />
           </div>
-          <Spacing size={20} />
+          <Spacing size={10} />
           <MenuItem href="/" onClick={toggle}>
             Accueil
           </MenuItem>
@@ -71,7 +71,7 @@ const style = {
   container: `flex flex-col gap-5 relative top-20 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[1000]`,
   item: `text-3xl text-white cursor-pointer hover:text-background transition-colors duration-700 ease-in-out ${londrina.className}`,
   menu: {
-    open: `h-full w-full `,
+    open: `h-full w-full`,
     close: `w-0 h-full`,
     default: `overflow-hidden transition-all duration-700 fixed z-50 top-0 right-0 bg-darkblue`,
   },

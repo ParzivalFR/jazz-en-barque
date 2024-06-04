@@ -21,10 +21,10 @@ export default function Home() {
         width={300}
         height={300}
         className={
-          "absolute z-10 right-1/2 translate-x-1/2 bottom-1/3 md:bottom-1/2 translate-y-1/2"
+          "absolute z-10 right-1/2 translate-x-1/2 bottom-1/3 xl:bottom-1/2 2xl:bottom-1/3 translate-y-1/2"
         }
       />
-      <main className="h-svh">
+      <main className="relative h-svh">
         <Program />
         {WindowSizeContext < 1024 ? <BoardingMobile /> : <BoardingLarge />}
         <Spacing size={100} />

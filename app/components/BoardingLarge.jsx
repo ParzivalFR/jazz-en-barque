@@ -16,12 +16,10 @@ const BoardingLarge = () => {
         <Image src={LittleBoat} alt="Petit bateau" width={90} height={90} />
       </div>
       <div className="flex flex-col items-center gap-6 lg:gap-8">
-        <h2
-          className={`text-yellow text-4xl lg:text-8xl ${londrina.className}`}
-        >
+        <h2 className={`text-yellow lg:text-8xl ${londrina.className}`}>
           Embarquez !
         </h2>
-        <p className="text-xs lg:text-base">
+        <p className="text-xl">
           Il est maintenant temps de vous présenter votre embarcation :
         </p>
       </div>
@@ -50,10 +48,8 @@ const BoardingLarge = () => {
           </>
         )}
       </div>
-      <hr className="border-yellow w-3/5 my-8" />
       <div className="relative flex items-center gap-6 bg-orange bg-opacity-35 rounded-2xl p-4">
         <Image src={Cushion} alt="Coussin" width={50} height={50} />
-        <hr className="absolute top-10 left-14 rotate-90 w-10 bg-yellow" />
         <p className="text-base">
           Pour votre confort, veillez à apporter une tenue adequat et des
           coussins !
