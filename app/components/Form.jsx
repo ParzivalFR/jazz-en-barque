@@ -6,11 +6,23 @@ import { londrina } from "../fonts";
 const Form = () => {
   const [confirmeMessage, setConfirmeMessage] = useState(false);
   const [errorMesssage, setErrorMessage] = useState(false);
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const handleSubit = async (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
+
+    if (!validateEmail(data.email)) {
+      setErrorMessage(true);
+      return;
+    }
+
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -18,6 +30,7 @@ const Form = () => {
       },
       body: JSON.stringify(data),
     });
+
     if (response.ok) {
       setConfirmeMessage(true);
       form.reset();
