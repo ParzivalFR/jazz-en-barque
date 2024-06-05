@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { ThreeDots } from "react-loader-spinner";
 import { londrina } from "../fonts";
 
 const Form = () => {
   const [confirmeMessage, setConfirmeMessage] = useState(false);
   const [errorMesssage, setErrorMessage] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState(false);
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,6 +19,8 @@ const Form = () => {
     const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
+
+    setLoadingMessage(true);
 
     if (!validateEmail(data.email)) {
       setErrorMessage(true);
@@ -32,10 +36,17 @@ const Form = () => {
     });
 
     if (response.ok) {
+      setLoadingMessage(false);
       setConfirmeMessage(true);
       form.reset();
+      setTimeout(() => {
+        setConfirmeMessage(false);
+      }, 5000);
     } else {
       setErrorMessage(true);
+      setTimeout(() => {
+        setErrorMessage(false);
+      }, 5000);
     }
   };
 
@@ -47,7 +58,7 @@ const Form = () => {
         >
           Contact
         </h1>
-        <p className="text-sm md:text-xl lg:text-2xlxl:text-4xl lg:w-4/5">
+        <p className="text-sm md:text-xl md:w-4/5">
           Que ce soit à propos de l’évènement ou bien simplement nous saluer,
           n’hésitez pas à nous contacter :
         </p>
@@ -85,12 +96,14 @@ const Form = () => {
           required
           aria-required="true"
         ></textarea>
-        <button
-          type="submit"
-          className={`${londrina.className} tracking-wider bg-darkpurple text-white uppercase py-1 px-8 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
-        >
-          Envoyez
-        </button>
+        {!loadingMessage ? (
+          <button
+            type="submit"
+            className={`${londrina.className} tracking-wider bg-darkpurple text-white uppercase py-1 px-8 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
+          >
+            Envoyez
+          </button>
+        ) : null}
         {confirmeMessage ? (
           <p className="text-green-500 animate-bounce">
             Message envoyé avec succès
@@ -99,7 +112,19 @@ const Form = () => {
           <p className="text-red-500 animate-bounce">
             Erreur lors de l'envoi du message
           </p>
-        ) : null}
+        ) : (
+          loadingMessage && (
+            <div className="flex flex-col justify-center items-center">
+              <ThreeDots
+                color="#3c1123"
+                height={50}
+                width={50}
+                ariaLabel="three-dots-loading"
+                visible={loadingMessage}
+              />
+            </div>
+          )
+        )}
       </form>
       <div></div>
     </section>
