@@ -43,6 +43,7 @@ const Form = () => {
         setConfirmeMessage(false);
       }, 5000);
     } else {
+      setLoadingMessage(false);
       setErrorMessage(true);
       setTimeout(() => {
         setErrorMessage(false);
