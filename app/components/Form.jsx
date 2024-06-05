@@ -1,6 +1,31 @@
+"use client";
+
+import { useState } from "react";
 import { londrina } from "../fonts";
 
 const Form = () => {
+  const [confirmeMessage, setConfirmeMessage] = useState(false);
+  const [errorMesssage, setErrorMessage] = useState(false);
+  const handleSubit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (response.ok) {
+      setConfirmeMessage(true);
+      form.reset();
+    } else {
+      setErrorMessage(true);
+    }
+  };
+
   return (
     <section className="wave-background lg:bottom-48 z-[20] flex flex-col items-center gap-12 w-full h-auto bg-background pt-10 px-4">
       <div className="flex flex-col justify-center items-center gap-20">
@@ -17,9 +42,12 @@ const Form = () => {
       <form
         method="post"
         className="w-11/12 md:max-w-[600px] flex flex-col justify-center items-center gap-4"
+        onSubmit={handleSubit}
       >
         <input
           type="text"
+          name="name"
+          id="name"
           placeholder="* Entrez votre Nom et Prénom"
           className="px-4 py-1 lg:px-6 lg:py-3 rounded-full w-full"
           required
@@ -27,6 +55,8 @@ const Form = () => {
         />
         <input
           type="email"
+          name="email"
+          id="email"
           placeholder="* Entrez votre adresse email"
           className="px-4 py-1 lg:px-6 lg:py-3 rounded-full w-full"
           required
@@ -48,6 +78,15 @@ const Form = () => {
         >
           Envoyez
         </button>
+        {confirmeMessage ? (
+          <p className="text-green-500 animate-bounce">
+            Message envoyé avec succès
+          </p>
+        ) : errorMesssage ? (
+          <p className="text-red-500 animate-bounce">
+            Erreur lors de l'envoi du message
+          </p>
+        ) : null}
       </form>
       <div></div>
     </section>
