@@ -25,7 +25,7 @@ const ImageModal = ({ imageUrl, onClose, onPrevious, onNext }) => {
           <FaArrowLeft size={20} className="md:size-8 xl:size-10" />
         </button>
         <button
-          className="absolute top-1/2 right-4 translate-x-1/2 text-background text-5xl transition-transform hover:scale-[1.05] duration-500"
+          className="absolute top-1/2 right-4 text-background text-5xl transition-transform hover:scale-[1.05] duration-500"
           onClick={onNext}
         >
           <FaArrowRight size={20} className="md:size-8 xl:size-10" />
