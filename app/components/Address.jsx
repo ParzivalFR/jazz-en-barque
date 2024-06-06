@@ -16,10 +16,9 @@ const Address = () => {
             Pour nous rejoindre, rien de plus simple, votre GPS saura nous
             trouver 🙂
           </p>
-          <p className="text-white flex flex-col sm:flex-row text-sm md:text-xl">
-            Notre adresse :{" "}
-            <address>“Etang des landes” 41210 Saint Viâtre</address>
-          </p>
+          <address className="text-white flex flex-col sm:flex-row text-sm md:text-xl">
+            Notre adresse : <p>“Etang des landes” 41210 Saint Viâtre</p>
+          </address>
         </div>
       </div>
       <Spacing size={40} />

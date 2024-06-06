@@ -16,6 +16,19 @@
 }
 
 @layer utilities {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--middle-blue);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--light-blue);
+    border-radius: 10px;
+  }
+
   body {
     overflow-x: hidden;
     background-color: var(--background);

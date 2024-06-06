@@ -60,7 +60,7 @@ const housingTypes = [
 
 const Housing = () => {
   return (
-    <div className="w-full h-auto md:w-4/5 xl:w-8/12 flex flex-col gap-8">
+    <div className="w-full h-auto md:w-4/5 xl:w-8/12 flex flex-col gap-20 lg:gap-12">
       {housingTypes.map((housing) => (
         <div
           key={housing.title}
@@ -72,16 +72,16 @@ const Housing = () => {
               alt={housing.title}
               width={200}
               height={200}
-              className={`md:w-64  transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out`}
+              className={`md:w-64 transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out`}
             />
           )}
           <div className="flex flex-col justify-center items-center gap-4 lg:max-w-[500px]">
-            <div className="flex flex-col justify-start gap-2 w-full">
+            <div className="flex flex-col items-center lg:items-start md:justify-start gap-2 w-full">
               <h3 className="text-xl lg:text-3xl font-semibold">
                 {housing.title}
               </h3>
               {housing.description && (
-                <ul className="text-sm md:text-base flex flex-col gap-2">
+                <ul className="text-sm md:text-base text-center md:text-start flex flex-col gap-2">
                   {housing.description.map((descItem) => (
                     <li key={descItem}>· {descItem}</li>
                   ))}

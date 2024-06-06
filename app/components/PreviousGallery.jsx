@@ -22,9 +22,9 @@ import Img8 from "@/app/images/8.webp";
 import Img9 from "@/app/images/9.webp";
 import Image from "next/image";
 import { useState } from "react";
+import { londrina } from "../fonts";
 import ImageModal from "./ImageModal";
 import Spacing from "./Spacing";
-import { londrina } from "../fonts";
 
 const PreviousGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -57,8 +57,26 @@ const PreviousGallery = () => {
     setSelectedImage(null);
   };
 
+  const handlePrevious = () => {
+    const index = images.indexOf(selectedImage);
+    if (index > 0) {
+      setSelectedImage(images[index - 1]);
+    } else if (index === 0) {
+      setSelectedImage(images[images.length - 1]);
+    }
+  };
+
+  const handleNext = () => {
+    const index = images.indexOf(selectedImage);
+    if (index < images.length - 1) {
+      setSelectedImage(images[index + 1]);
+    } else if (index === images.length - 1) {
+      setSelectedImage(images[0]);
+    }
+  };
+
   return (
-    <section className="wave-background z-[20] flex flex-col items-center gap-20 w-full h-auto bg-background pt-10 px-4">
+    <section className="wave-background z-[20] flex flex-col items-center gap-48 w-full h-auto bg-background pt-10 px-4">
       <h1
         className={`${londrina.className} text-darkblue text-center text-4xl sm:text-6xl`}
       >
@@ -83,7 +101,12 @@ const PreviousGallery = () => {
       </div>
       <Spacing size={50} />
       {selectedImage && (
-        <ImageModal imageUrl={selectedImage} onClose={handleClose} />
+        <ImageModal
+          imageUrl={selectedImage}
+          onClose={handleClose}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+        />
       )}
       <div className="absolute -bottom-16 right-6 lg:right-24 2xl:right-36 z-[-100] flex gap-6 md:gap-20 lg:gap-32">
         <Image src={ImgAlgea} alt="Algea" width={50} height={50} />
