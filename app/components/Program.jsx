@@ -65,13 +65,13 @@ const Program = () => {
   ];
 
   return (
-    <section className="relative flex flex-col gap-12 items-center w-full bg-darkblue px-4 pb-20 lg:pb-48">
+    <section className="relative flex flex-col gap-4 items-center w-full bg-darkblue px-4 pb-20 lg:pb-48">
       <Image
         src={ImgWaveRounded}
         alt="Vague"
         className="absolute -top-12 sm:-top-24 md:-top-36 lg:-top-48 xl:-top-64 w-full"
       />
-      <div className="flex flex-col items-center text-background pt-20 gap-4">
+      <div className="flex flex-col items-center text-background pt-20 pb-10 gap-4">
         <h1
           className={`text-4xl sm:text-6xl lg:text-8xl ${londrina.className}`}
         >
