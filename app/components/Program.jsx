@@ -69,7 +69,7 @@ const Program = () => {
       <Image
         src={ImgWaveRounded}
         alt="Vague"
-        className="absolute -top-12 sm:-top-24 md:-top-36 lg:-top-48 xl:-top-72 w-full"
+        className="absolute -top-12 sm:-top-24 md:-top-36 lg:-top-48 xl:-top-64 w-full"
       />
       <div className="flex flex-col items-center text-background pt-20 gap-4">
         <h1

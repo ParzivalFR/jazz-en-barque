@@ -75,7 +75,7 @@ const style = {
   menu: {
     open: `h-svh w-full`,
     close: `w-0 h-svh`,
-    default: `overflow-hidden transition-all duration-700 fixed z-50 top-0 right-0 bg-middleblue`,
+    default: `overflow-x-hidden overflew-y-auto transition-all duration-700 fixed z-50 top-0 right-0 bg-middleblue`,
   },
 };
 
