@@ -65,7 +65,7 @@ const Program = () => {
   ];
 
   return (
-    <section className="relative flex flex-col gap-16 items-center w-full bg-darkblue px-4 pb-52">
+    <section className="relative flex flex-col gap-12 items-center w-full bg-darkblue px-4 pb-20 lg:pb-48">
       <Image
         src={ImgWaveRounded}
         alt="Vague"
@@ -78,29 +78,51 @@ const Program = () => {
           PROGRAMME 2024
         </h1>
       </div>
-      <div className="flex flex-col justify-between max-w-[700px] sm:gap-2 md:gap-4">
-        {programData.map((item) => (
-          <div
-            key={item.time}
-            className="flex flex-row justify-between gap-16 sm:gap-24 md:gap-32 lg:gap-56"
-          >
-            <div className="flex justify-between items-center gap-7 lg:gap-20">
-              <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
+      {programData.map((item, index) => (
+        <div key={index} className="w-full flex gap-10 md:gap-20 lg:gap-48">
+          <div className="w-full">
+            <div className="flex items-center justify-end gap-2">
+              <Image src={item.icon} alt="Accueil" className="w-8 lg:w-12" />
               <h4
-                className={`text-background text-lg font-bold lg:text-3xl ${londrina.className}`}
+                className={`text-lg text-white font-bold lg:text-3xl ml-4 ${londrina.className}`}
               >
                 {item.time}
               </h4>
             </div>
-            <div className="w-full flex justify-start items-center gap-1 lg:gap-2">
-              <p className="text-background text-end text-sm sm:text-base lg:text-2xl">
+          </div>
+          <div className="w-full flex items-center">
+            <div className="flex justify-start items-center gap-2">
+              <p className="text-background text-sm sm:text-base lg:text-2xl">
                 {item.title}
               </p>
-              {item.description && item.description}
+              {item.description ? item.description : null}
+            </div>
+          </div>
+        </div>
+      ))}
+      {/* <div className="flex flex-col justify-between w-auto max-w-[800px] sm:gap-2 md:gap-4">
+        {programData.map((item) => (
+          <div
+            key={item.time}
+            className="w-full flex flex-row justify-between gap-4 sm:gap-8 lg:gap-48"
+          >
+            <div className="flex items-center">
+              <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
+              <h4
+                className={`text-background text-lg font-bold lg:text-3xl ml-4 ${londrina.className}`}
+              >
+                {item.time}
+              </h4>
+            </div>
+            <div className="flex items-center gap-1 lg:gap-2">
+              <p className="text-background text-sm sm:text-base lg:text-2xl">
+                {item.title}
+              </p>
+              {item.description ? item.description : null}
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };
