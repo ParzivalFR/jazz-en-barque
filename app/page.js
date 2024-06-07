@@ -21,7 +21,7 @@ export default function Home() {
         width={500}
         height={500}
         className={
-          "absolute z-10 right-1/2 translate-x-1/2 bottom-1/3 xl:bottom-1/2 2xl:bottom-1/3 translate-y-1/2"
+          "absolute z-10 right-1/2 translate-x-1/2 bottom-1/4 xl:bottom-1/3 2xl:bottom-1/3 translate-y-1/2"
         }
       />
       <main className="relative h-svh">
