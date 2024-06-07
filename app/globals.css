@@ -16,7 +16,15 @@
 }
 
 @layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
+    margin: 0;
+    padding: 0;
     width: 100svw;
     overflow-x: hidden;
     background-color: var(--background);
@@ -31,6 +39,19 @@
     justify-content: center;
     align-items: center;
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 9% 100%);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--middle-blue);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--light-blue);
+    border-radius: 10px;
   }
 
   .wave-background {

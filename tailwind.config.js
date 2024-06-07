@@ -12,7 +12,9 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
-      sv: "2000px",
+      sv: "1960px",
+      uw: "2420px",
+      uw2: "2800px",
     },
     extend: {
       colors: {

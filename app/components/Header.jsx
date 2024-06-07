@@ -23,7 +23,7 @@ export default function Header({ src, className, width, height }) {
           />
         </div>
       </div>
-      <div className="absolute top-5 right-5">
+      <div className="absolute top-5 right-5 xl:top-10 xl:right-10">
         <BurgerMenu />
       </div>
     </header>
