@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { RxDividerHorizontal } from "react-icons/rx";
-import { londrina } from "../fonts";
+import { jost, londrina } from "../fonts";
 import BleLeft from "../icons/ble-left.svg";
 import BleRight from "../icons/ble-right.svg";
 import Star1 from "../icons/star-1.svg";
@@ -28,9 +28,7 @@ const Competition = () => {
         </p>
         <div className="flex justify-center items-center gap-5">
           <RxDividerHorizontal className="text-5xl text-black" />
-          <h3
-            className={`text-xl lg:text-2xl text-center ${londrina.className}`}
-          >
+          <h3 className={`text-xl lg:text-2xl text-center ${jost.className}`}>
             Artistes et groupes musicaux{" "}
           </h3>
           <RxDividerHorizontal className="text-5xl text-black" />

@@ -66,9 +66,15 @@ const Form = () => {
       </div>
       <form
         method="post"
-        className="w-11/12 md:max-w-[600px] flex flex-col justify-center items-center gap-4"
+        className=" relative w-11/12 md:max-w-[600px] flex flex-col justify-center items-center gap-4"
         onSubmit={handleSubit}
       >
+        <label
+          htmlFor="name"
+          className="text-red-500 absolute top-1 left-4 md:left-4 lg:left-6 lg:top-3"
+        >
+          *
+        </label>
         <input
           type="text"
           name="name"
@@ -78,6 +84,12 @@ const Form = () => {
           required
           aria-required="true"
         />
+        <label
+          htmlFor="email"
+          className="text-red-500 absolute top-[52px] left-4 md:left-4 lg:left-6 lg:top-[76px]"
+        >
+          *
+        </label>
         <input
           type="email"
           name="email"
@@ -87,6 +99,13 @@ const Form = () => {
           required
           aria-required="true"
         />
+        <label
+          htmlFor="message"
+          aria-label="message"
+          className="text-red-500 absolute top-[104px] left-2 lg:left-4 lg:top-[144px]"
+        >
+          *
+        </label>
         <textarea
           name="message"
           id="message"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { londrina } from "../fonts";
 import Caravane from "../images/caravane.png";
 import Gîte from "../images/gîte.png";
@@ -5,6 +6,9 @@ import Tente from "../images/tente.png";
 import Address from "./Address";
 import Housing from "./Housing";
 import Spacing from "./Spacing";
+import MiddleMoon from "../icons/middle-moon.svg";
+import DuckFoot from "../icons/duck-foot.svg";
+import BigLeafBlue from "../icons/big-leaf-blue.svg";
 
 const UsefulInfos = () => {
   const logements = [
@@ -73,6 +77,20 @@ const UsefulInfos = () => {
       <Housing />
       <Spacing size={50} />
       <Address />
+      <Image
+        src={MiddleMoon}
+        width={80}
+        height={80}
+        alt="Demi lune blue"
+        className="absolute right-4 -top-0 sm:right-12 sm:top-6 sm:w-24 lg:w-36 -rotate-45"
+      />
+      <Image
+        src={DuckFoot}
+        width={40}
+        height={40}
+        alt="Empreinte de canard"
+        className="absolute left-6 sm:left-12 lg:left-24 -bottom-1 rotate-12"
+      />
     </section>
   );
 };

@@ -3,6 +3,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import Caravane from "../images/caravane.svg";
 import Gîte from "../images/gite.svg";
 import Tente from "../images/tente.svg";
+import BigLeafBlue from "../icons/big-leaf-blue.svg";
 
 const housingTypes = [
   {
@@ -60,7 +61,7 @@ const housingTypes = [
 
 const Housing = () => {
   return (
-    <div className="w-full h-auto md:w-4/5 xl:w-8/12 flex flex-col gap-20 lg:gap-12">
+    <div className="relative w-full h-auto md:w-4/5 xl:w-8/12 flex flex-col gap-20 lg:gap-12">
       {housingTypes.map((housing) => (
         <div
           key={housing.title}
@@ -111,6 +112,13 @@ const Housing = () => {
           </div>
         </div>
       ))}
+      <Image
+        src={BigLeafBlue}
+        width={80}
+        height={80}
+        alt="Feuille bleue"
+        className="absolute -bottom-28 -left-6 sm:-bottom-12 lg:w-36 md:-left-28 md:w-40 lg:-left-36 xl:-left-72 xl:w-44 "
+      />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { londrina } from "../fonts";
+import { inter, londrina } from "../fonts";
 import Map from "./Map";
 import Spacing from "./Spacing";
 
@@ -11,13 +11,13 @@ const Address = () => {
         >
           Se rendre à l'évènement
         </h3>
-        <div className="flex flex-col justify-start gap-4">
+        <div className={`${inter.className} flex flex-col justify-start gap-4`}>
           <p className="text-white text-sm md:text-xl">
             Pour nous rejoindre, rien de plus simple, votre GPS saura nous
             trouver 🙂
           </p>
-          <address className="text-white flex flex-col sm:flex-row text-sm md:text-xl">
-            Notre adresse : <p>“Etang des landes” 41210 Saint Viâtre</p>
+          <address className="text-white not-italic flex flex-col gap-2 sm:flex-row text-sm md:text-xl">
+            Notre adresse : <p> “Etang des landes” 41210 Saint Viâtre</p>
           </address>
         </div>
       </div>

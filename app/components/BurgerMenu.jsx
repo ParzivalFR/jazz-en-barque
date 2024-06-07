@@ -31,7 +31,7 @@ export default function BurgerMenu() {
       <Menu open={open}>
         <button
           aria-label="Close"
-          className="absolute z-[910] top-6 right-6 xl:top-10 xl:right-10 text-5xl text-black cursor-pointer transition-transform duration-700 ease-in-out hover:rotate-180"
+          className="absolute z-[910] top-6 right-6 lg:top-16 lg:right-24 text-5xl text-black cursor-pointer transition-transform duration-700 ease-in-out hover:rotate-180"
           onClick={toggle}
         >
           <MdOutlineClose className="bg-background border border-black p-1 rounded-full size-10 lg:size-18 text-black" />
