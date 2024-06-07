@@ -71,6 +71,7 @@ const Form = () => {
       >
         <label
           htmlFor="name"
+          aria-label="name"
           className="text-red-500 absolute top-1 left-4 md:left-4 lg:left-6 lg:top-3"
         >
           *
@@ -86,6 +87,7 @@ const Form = () => {
         />
         <label
           htmlFor="email"
+          aria-label="email"
           className="text-red-500 absolute top-[52px] left-4 md:left-4 lg:left-6 lg:top-[76px]"
         >
           *
