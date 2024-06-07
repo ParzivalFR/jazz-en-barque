@@ -36,7 +36,7 @@ export default function BurgerMenu() {
         >
           <MdOutlineClose className="bg-background border border-black p-1 rounded-full size-10 lg:size-18 text-black" />
         </button>
-        <MenuContainer open={open}>
+        <MenuContainer>
           <div className="flex justify-center items-start">
             <Image
               src="/logo-1.png"
@@ -70,11 +70,11 @@ export default function BurgerMenu() {
 
 /* Logic */
 const style = {
-  container: `flex flex-col gap-8 relative top-10 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[900] transition-opacity duration-500 ease-in-out`,
-  item: `px-4 md:p-10 text-3xl text-white cursor-pointer transition-all hover:text-background duration-700 ease-in-out ${londrina.className}`,
+  container: `flex flex-col gap-8 relative top-10 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[900]`,
+  item: `px-4 md:px-10 text-3xl text-white cursor-pointer transition hover:text-yellow duration-700 ease-in-out ${londrina.className}`,
   menu: {
-    open: `h-svh w-full opacity-100 visible`,
-    close: `w-0 h-svh opacity-0 invisible`,
+    open: `h-svh w-full`,
+    close: `w-0 h-svh`,
     default: `overflow-x-hidden overflow-y-auto transition-all duration-700 fixed z-50 top-0 right-0 bg-middleblue`,
   },
 };
@@ -90,12 +90,8 @@ function Menu({ children, open }) {
   );
 }
 
-function MenuContainer({ children, open }) {
-  return (
-    <div className={`${style.container} ${open ? "opacity-100" : "opacity-0"}`}>
-      {children}
-    </div>
-  );
+function MenuContainer({ children }) {
+  return <div className={style.container}>{children}</div>;
 }
 
 function MenuItem({ children, href, onClick }) {

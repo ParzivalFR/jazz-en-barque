@@ -12,7 +12,7 @@ const BoardingMobile = () => {
       <div className="absolute -top-24 left-0">
         <Image src={FleureBleu} alt="Fleur bleu" width={50} height={50} />
       </div>
-      <div className=" overflow-hidden absolute -top-24 right-2">
+      <div className=" overflow-hidden absolute -top-12 right-2">
         <Image src={LittleBoat} alt="Petit bateau" width={50} height={50} />
       </div>
       <div className="flex flex-col items-center gap-6">
