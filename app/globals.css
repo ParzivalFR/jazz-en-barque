@@ -16,20 +16,8 @@
 }
 
 @layer utilities {
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--middle-blue);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--light-blue);
-    border-radius: 10px;
-  }
-
   body {
+    width: 100svw;
     overflow-x: hidden;
     background-color: var(--background);
   }
@@ -43,6 +31,21 @@
     justify-content: center;
     align-items: center;
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 9% 100%);
+  }
+
+  @media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--middle-blue);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--light-blue);
+      border-radius: 10px;
+    }
   }
 
   .wave-background {

@@ -30,7 +30,7 @@ const BoardingLarge = () => {
       <div className="absolute -top-36 left-0">
         <Image src={FleureBleu} alt="Fleur bleu" width={100} height={100} />
       </div>
-      <div className="absolute -top-28 -right-2">
+      <div className="absolute -top-28 right-0">
         <Image src={LittleBoat} alt="Petit bateau" width={90} height={90} />
       </div>
       <div className="flex flex-col items-center gap-6 lg:gap-8">
