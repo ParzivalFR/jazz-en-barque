@@ -9,7 +9,6 @@ import Header from "./components/Header";
 import Program from "./components/Program";
 import Spacing from "./components/Spacing";
 import { useWindowSize } from "./hooks/WindowSizeContext";
-import imgHome from "./images/page_home.webp";
 
 export default function Home() {
   const WindowSizeContext = useWindowSize();
@@ -17,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Header
-        src={imgHome}
+        src="https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879550/JEB/un2joswbyyhggce9wmzp.webp"
         width={500}
         height={500}
         className={

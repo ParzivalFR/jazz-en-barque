@@ -4,7 +4,6 @@ import { londrina } from "../fonts";
 import Cushion from "../icons/cushion.png";
 import FleureBleu from "../icons/fleure_bleu.svg";
 import LittleBoat from "../icons/petit_bateau.svg";
-import BoatWithLign from "../images/boat.png";
 
 const DescriptionBlock = ({ description, position }) => (
   <div
@@ -42,7 +41,12 @@ const BoardingLarge = () => {
         </p>
       </div>
       <div className="relative">
-        <Image src={BoatWithLign} alt="Embarquement" width={500} height={500} />
+        <Image
+          src="https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/bso1pun8xyewriqa3wsg.png"
+          alt="Embarquement"
+          width={500}
+          height={500}
+        />
         {descriptions.map((desc, index) => (
           <DescriptionBlock
             key={index}

@@ -59,7 +59,7 @@ const Form = () => {
         >
           Contact
         </h1>
-        <p className="text-sm md:text-xl md:w-4/5">
+        <p className="text-sm w-11/12 ">
           Que ce soit à propos de l’évènement ou bien simplement nous saluer,
           n’hésitez pas à nous contacter :
         </p>
@@ -80,10 +80,10 @@ const Form = () => {
           type="text"
           name="name"
           id="name"
-          placeholder="* Entrez votre Nom et Prénom"
-          className="px-4 py-1 lg:px-6 lg:py-3 rounded-full w-full"
-          required
+          placeholder="Entrez votre Nom et Prénom"
+          className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
           aria-required="true"
+          required
         />
         <label
           htmlFor="email"
@@ -96,8 +96,8 @@ const Form = () => {
           type="email"
           name="email"
           id="email"
-          placeholder="* Entrez votre adresse email"
-          className="px-4 py-1 lg:px-6 lg:py-3 rounded-full w-full"
+          placeholder="Entrez votre adresse email"
+          className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
           required
           aria-required="true"
         />
@@ -113,34 +113,34 @@ const Form = () => {
           id="message"
           cols="30"
           rows="8"
-          placeholder="* Entrez votre message"
-          className="p-2 lg:p-4 rounded-lg w-full"
+          placeholder="Votre message ici..."
+          className="px-6 py-2 lg:px-10 lg:py-4 rounded-lg w-full"
           required
           aria-required="true"
         ></textarea>
         {!loadingMessage ? (
           <button
             type="submit"
-            className={`${londrina.className} tracking-wider bg-darkpurple text-white uppercase py-1 px-8 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
+            className={`${londrina.className} tracking-wider bg-darkpurple text-white uppercase py-1 px-8 lg:py-2 lg:px-12 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
           >
             Envoyez
           </button>
         ) : null}
         {confirmeMessage ? (
-          <p className="text-green-500 animate-bounce">
+          <p className="text-white animate-bounce px-6 py-2 bg-green-500/50 rounded-md">
             Message envoyé avec succès
           </p>
         ) : errorMesssage ? (
-          <p className="text-red-500 animate-bounce">
+          <p className="text-white animate-bounce px-6 py-2 bg-red-500/50 rounded-md">
             Erreur lors de l'envoi du message
           </p>
         ) : (
           loadingMessage && (
             <div className="flex flex-col justify-center items-center">
               <ThreeDots
-                color="#3c1123"
-                height={50}
-                width={50}
+                color="#bf5108"
+                height={70}
+                width={70}
                 ariaLabel="three-dots-loading"
                 visible={loadingMessage}
               />

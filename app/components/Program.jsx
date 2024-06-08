@@ -82,47 +82,25 @@ const Program = () => {
         <div key={index} className="w-full flex gap-10 md:gap-20 lg:gap-48">
           <div className="w-full">
             <div className="flex items-center justify-end gap-2">
-              <Image src={item.icon} alt="Accueil" className="w-8 lg:w-12" />
-              <h4
+              <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
+              <time
+                dateTime={item.time}
                 className={`text-lg text-white font-bold lg:text-3xl ml-4 ${londrina.className}`}
               >
                 {item.time}
-              </h4>
+              </time>
             </div>
           </div>
           <div className="w-full flex items-center">
             <div className="flex justify-start items-center gap-2">
-              <p className="text-background text-sm sm:text-base lg:text-2xl">
+              <h4 className="text-background text-sm sm:text-base lg:text-2xl">
                 {item.title}
-              </p>
+              </h4>
               {item.description ? item.description : null}
             </div>
           </div>
         </div>
       ))}
-      {/* <div className="flex flex-col justify-between w-auto max-w-[800px] sm:gap-2 md:gap-4">
-        {programData.map((item) => (
-          <div
-            key={item.time}
-            className="w-full flex flex-row justify-between gap-4 sm:gap-8 lg:gap-48"
-          >
-            <div className="flex items-center">
-              <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
-              <h4
-                className={`text-background text-lg font-bold lg:text-3xl ml-4 ${londrina.className}`}
-              >
-                {item.time}
-              </h4>
-            </div>
-            <div className="flex items-center gap-1 lg:gap-2">
-              <p className="text-background text-sm sm:text-base lg:text-2xl">
-                {item.title}
-              </p>
-              {item.description ? item.description : null}
-            </div>
-          </div>
-        ))}
-      </div> */}
     </section>
   );
 };

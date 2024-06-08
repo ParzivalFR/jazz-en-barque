@@ -2,24 +2,6 @@
 
 import ImgAlgea from "@/app/icons/algae.svg";
 import ImgLeafDark from "@/app/icons/leaf-dark.svg";
-import Img1 from "@/app/images/1-min.webp";
-import Img10 from "@/app/images/10-min.webp";
-import Img11 from "@/app/images/11-min.webp";
-import Img12 from "@/app/images/12-min.webp";
-import Img13 from "@/app/images/13-min.webp";
-import Img14 from "@/app/images/14-min.webp";
-import Img15 from "@/app/images/15-min.webp";
-import Img16 from "@/app/images/16-min.webp";
-import Img17 from "@/app/images/17-min.webp";
-import Img18 from "@/app/images/18-min.webp";
-import Img2 from "@/app/images/2-min.webp";
-import Img3 from "@/app/images/3-min.webp";
-import Img4 from "@/app/images/4-min.webp";
-import Img5 from "@/app/images/5-min.webp";
-import Img6 from "@/app/images/6-min.webp";
-import Img7 from "@/app/images/7-min.webp";
-import Img8 from "@/app/images/8-min.webp";
-import Img9 from "@/app/images/9-min.webp";
 import Image from "next/image";
 import { useState } from "react";
 import { londrina } from "../fonts";
@@ -29,24 +11,24 @@ import Spacing from "./Spacing";
 const PreviousGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const images = [
-    Img1,
-    Img2,
-    Img3,
-    Img4,
-    Img5,
-    Img6,
-    Img7,
-    Img8,
-    Img9,
-    Img10,
-    Img11,
-    Img12,
-    Img13,
-    Img14,
-    Img15,
-    Img16,
-    Img17,
-    Img18,
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879547/JEB/zufwhatdldgiqojifgoa.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879547/JEB/i9aiwhh7xddsiwel9uc4.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879551/JEB/pbcnc2i541atu32ic6is.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/io1ify9drssei76f8vkh.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/d7xfnmdzqeg7ihjwefxf.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/yjqvz1hruwyyz4ttejot.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879547/JEB/imexiohjsjmz5lv5fwt3.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879547/JEB/rqqkwr7usqa6qtfoz3zq.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/ch2zzyz7zkp02jmb6dcw.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/cux0ehp7fgobswo5fh3e.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/bk9i4usk2vipxgkbefgz.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/daxzb0zzmqerqcbwfzxl.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879548/JEB/hnxjkxbpdsodojxsetlb.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/yks16povpwqsrhs2k8lh.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879551/JEB/etb97cqimernlhs3hxil.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/w66xxnb5aqbxmumzhxq8.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/dqooe7b9xjrwstepm956.webp",
+    "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/itlciyiv0h6ysfgnojjp.webp",
   ];
 
   const handleShow = (img) => {

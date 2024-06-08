@@ -9,6 +9,8 @@ const ImageModal = ({ imageUrl, onClose, onPrevious, onNext }) => {
       <div className="relative flex justify-center items-center w-full h-svh">
         <Image
           src={imageUrl}
+          width={1280}
+          height={720}
           alt="Selected"
           className="object-cover max-w-full max-h-full lg:size-4/5 m-auto rounded-lg"
         />

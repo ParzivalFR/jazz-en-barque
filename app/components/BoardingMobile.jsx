@@ -4,7 +4,6 @@ import { londrina } from "../fonts";
 import Cushion from "../icons/cushion.png";
 import FleureBleu from "../icons/fleure_bleu.svg";
 import LittleBoat from "../icons/petit_bateau.svg";
-import BoatWithoutLign from "../images/boat_without_lign.png";
 
 const BoardingMobile = () => {
   return (
@@ -27,7 +26,7 @@ const BoardingMobile = () => {
       </div>
       <div>
         <Image
-          src={BoatWithoutLign}
+          src="https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/wcifsktlb6hjzaepanow.png"
           alt="Embarquement"
           width={400}
           height={400}

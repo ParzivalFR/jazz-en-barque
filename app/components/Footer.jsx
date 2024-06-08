@@ -11,7 +11,7 @@ const Footer = () => {
         </p>
         <hr className="h-px border-background w-24" />
         <p className="text-background text-sm">
-          Created with ❤️ by{" "}
+          Développé avec ❤️ par{" "}
           <Link
             href="https://www.gael-dev.fr/"
             target="_blank"

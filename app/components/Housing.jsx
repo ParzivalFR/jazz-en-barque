@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { FiPhoneCall } from "react-icons/fi";
-import Caravane from "../images/caravane.svg";
-import Gîte from "../images/gite.svg";
-import Tente from "../images/tente.svg";
 import BigLeafBlue from "../icons/big-leaf-blue.svg";
 
 const housingTypes = [
   {
-    image: Tente,
+    image:
+      "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879547/JEB/qhl0wd1docfaf4tg4kfb.svg",
     title: "Camping au bord de l’étang",
     description: [
       "Si vous avez une tente à monter, vous pouvez venir des 11h (prévoir le pique-nique).",
@@ -15,14 +13,16 @@ const housingTypes = [
     ],
   },
   {
-    image: Caravane,
+    image:
+      "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879549/JEB/u3s3xb1izuiyxthhshjd.svg",
     title: "Van, caravane et camping car",
     description: [
       "Pour les adeptes, vous pourrez trouver un petit coin sur place pour parker votre logement pour la nuit.",
     ],
   },
   {
-    image: Gîte,
+    image:
+      "https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879550/JEB/vyb8erjyjlxxkt4t5ihh.svg",
     title: "Les gites à proximité",
     content: [
       {
@@ -62,7 +62,7 @@ const housingTypes = [
 const Housing = () => {
   return (
     <div className="relative w-full h-auto md:w-4/5 xl:w-8/12 flex flex-col gap-20 lg:gap-12">
-      {housingTypes.map((housing) => (
+      {housingTypes.map((housing, index) => (
         <div
           key={housing.title}
           className="w-full h-auto flex flex-col justify-between items-center gap-4 lg:flex-row"
@@ -70,7 +70,8 @@ const Housing = () => {
           {housing.image && (
             <Image
               src={housing.image}
-              alt={housing.title}
+              alt={housing.title + index}
+              title={housing.title}
               width={200}
               height={200}
               className={`md:w-64 transition-transform hover:scale-105 hover:rotate-6 duration-700 ease-in-out`}

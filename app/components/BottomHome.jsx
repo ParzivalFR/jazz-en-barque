@@ -5,7 +5,6 @@ import Bottom3 from "../icons/bottom_3.svg";
 import Bottom4 from "../icons/bottom_4.svg";
 import Bottom5 from "../icons/bottom_5.svg";
 import Bottom6 from "../icons/bottom_6.svg";
-import ImageHome from "../images/page_home.webp";
 import RDV from "../icons/rdv.svg";
 
 const BottomHome = () => {
@@ -13,10 +12,10 @@ const BottomHome = () => {
     <section className="w-full bg-background px-6">
       <div className="relative max-w-[600px] m-auto ">
         <Image
-          src={ImageHome}
+          src="https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717879550/JEB/un2joswbyyhggce9wmzp.webp"
           alt="Image d'accueil"
-          width={1920}
-          height={1080}
+          width={900}
+          height={900}
           className="rounded-full aspect-square object-cover"
         />
         <div className="absolute -top-20 sm:-top-24 flex justify-center items-center w-full">

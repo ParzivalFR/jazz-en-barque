@@ -19,8 +19,10 @@ export default function BurgerMenu() {
     <>
       <div className="relative z-10  h-auto rounded-full">
         <button
+          aria-label="Open"
+          name="Open"
           onClick={toggle}
-          className="z-20 border border-black text-black flex justify-center items-center h-auto px-2 rounded-full bg-background hover:bg-orange transition-colors duration-500 ease-in-out"
+          className="z-20 border border-black text-black flex justify-center items-center h-auto px-2 rounded-full bg-background hover:bg-yellow transition-colors duration-500 ease-in-out"
         >
           <IoIosMenu className="size-8 md:size-10" />
         </button>
@@ -39,7 +41,7 @@ export default function BurgerMenu() {
         <MenuContainer>
           <div className="flex justify-center items-start">
             <Image
-              src="/logo-1.png"
+              src="https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717880016/logo-1_qejo4m.png"
               alt="Logo de Jazz En Barque"
               width={500}
               height={500}

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import BoatDown from "../public/404-boat.png";
 
 export default function NotFound() {
   const router = useRouter();
@@ -21,7 +20,7 @@ export default function NotFound() {
             Retour à l'accueil
           </button>
           <Image
-            src={BoatDown}
+            src="https://res.cloudinary.com/dbiqwsnu1/image/upload/v1717880016/404-boat_comeah.png"
             alt="Boat Down 404 page error"
             width={1600}
             height={1600}
