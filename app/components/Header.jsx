@@ -1,8 +1,13 @@
-import Logo from "@/public/logo-1.png";
+"use client";
+
 import Image from "next/image";
+import { useWindowSize } from "../hooks/WindowSizeContext";
 import BurgerMenu from "./BurgerMenu";
+import Back from "./Back";
 
 export default function Header({ src, className, width, height }) {
+  const windowSizeContext = useWindowSize();
+
   return (
     <header className="relative w-full">
       <div className="w-full xl:h-svh relative">
@@ -25,7 +30,8 @@ export default function Header({ src, className, width, height }) {
           />
         </div>
       </div>
-      <div className="absolute top-6 right-10 lg:top-16 lg:right-24">
+      <div className="absolute top-6 right-10 lg:top-16 lg:right-24 flex gap-2 lg:gap-4 items-center">
+        <Back />
         <BurgerMenu />
       </div>
     </header>

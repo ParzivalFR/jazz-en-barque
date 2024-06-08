@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ScrollToTop from "./ScrollToTop";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,6 +22,7 @@ const Footer = () => {
           </Link>
           .
         </p>
+        <ScrollToTop />
       </div>
     </footer>
   );
