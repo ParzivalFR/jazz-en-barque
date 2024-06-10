@@ -1,9 +1,16 @@
+"use client";
+
 import Footer from "@/app/components/Footer";
 import FullHistory from "@/app/components/FullHistory";
 import Header from "@/app/components/Header";
 import Spacing from "@/app/components/Spacing";
+import { useEffect } from "react";
 
 const History = () => {
+  useEffect(() => {
+    document.title = "Jazz en Barque - Toute l'histoire de Jazz en Barque ! 🎶";
+  }, []);
+
   return (
     <>
       <Header

@@ -1,8 +1,16 @@
+"use client";
+
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import UsefulInfos from "@/app/components/UsefulInfos";
+import { useEffect } from "react";
 
 const Informations = () => {
+  useEffect(() => {
+    document.title =
+      "Jazz en Barque - Informations utiles sur notre festival  🎶";
+  }, []);
+
   return (
     <>
       <Header

@@ -1,9 +1,17 @@
+"use client";
+
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import PreviousGallery from "@/app/components/PreviousGallery";
 import Spacing from "@/app/components/Spacing";
+import { useEffect } from "react";
 
 const page = () => {
+  useEffect(() => {
+    document.title =
+      "Jazz en Barque - Galerie photo des précédentes éditions 🎶";
+  }, []);
+
   return (
     <>
       <Header

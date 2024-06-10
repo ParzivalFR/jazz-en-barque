@@ -1,9 +1,16 @@
+"use client";
+
 import Footer from "@/app/components/Footer";
 import Form from "@/app/components/Form";
 import Header from "@/app/components/Header";
 import Spacing from "@/app/components/Spacing";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Jazz en Barque - Contactez-nous dès maintenant !";
+  }, []);
+
   return (
     <>
       <Header
