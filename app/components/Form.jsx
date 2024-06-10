@@ -73,75 +73,81 @@ const Form = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="relative w-11/12 md:max-w-[600px] flex flex-col justify-center items-center gap-4"
       >
-        <label
-          htmlFor="name"
-          aria-label="name"
-          className="text-red-500 absolute top-1 left-4 md:left-4 lg:left-6 lg:top-3"
-        >
-          *
-        </label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Entrez votre Nom et Prénom"
-          className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
-          aria-required="true"
-          {...register("name")}
-        />
-        {errors.name && (
-          <p className="text-background px-6 py-2 bg-red-500/50 rounded-md">
-            {errors.name.message}
-          </p>
-        )}
+        <div className="relative w-full">
+          <label
+            htmlFor="name"
+            aria-label="name"
+            className="text-red-500 absolute top-1 left-4 md:left-4 lg:left-6 lg:top-3"
+          >
+            *
+          </label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Entrez votre Nom et Prénom"
+            className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
+            aria-required="true"
+            {...register("name")}
+          />
+          {errors.name && (
+            <p className="sm:w-2/5 text-background m-auto text-center mt-2 px-6 py-2 bg-red-500/50 rounded-md">
+              {errors.name.message}
+            </p>
+          )}
+        </div>
 
-        <label
-          htmlFor="email"
-          aria-label="email"
-          className="text-red-500 absolute top-[52px] left-4 md:left-4 lg:left-6 lg:top-[76px]"
-        >
-          *
-        </label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Entrez votre adresse email"
-          className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
-          aria-required="true"
-          {...register("email")}
-        />
-        {errors.email && (
-          <p className="text-background px-6 py-2 bg-red-500/50 rounded-md">
-            {errors.email.message}
-          </p>
-        )}
+        <div className="relative w-full">
+          <label
+            htmlFor="email"
+            aria-label="email"
+            className="text-red-500 absolute top-1 left-4 md:left-4 lg:left-6 lg:top-3"
+          >
+            *
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Entrez votre adresse email"
+            className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
+            aria-required="true"
+            {...register("email")}
+          />
+          {errors.email && (
+            <p className="sm:w-2/5 text-background m-auto text-center mt-2 px-6 py-2 bg-red-500/50 rounded-md">
+              {errors.email.message}
+            </p>
+          )}
+        </div>
 
-        <label
-          htmlFor="message"
-          aria-label="message"
-          className="text-red-500 absolute top-[104px] left-2 lg:left-4 lg:top-[144px]"
-        >
-          *
-        </label>
-        <textarea
-          name="message"
-          cols="30"
-          rows="8"
-          placeholder="Votre message ici..."
-          className="px-6 py-2 lg:px-10 lg:py-4 rounded-lg w-full"
-          aria-required="true"
-          {...register("message")}
-        ></textarea>
-        {errors.message && (
-          <p className="text-background px-6 py-2 bg-red-500/50 rounded-md">
-            {errors.message.message}
-          </p>
-        )}
+        <div className="relative w-full">
+          <label
+            htmlFor="message"
+            aria-label="message"
+            className="text-red-500 absolute top-1 left-3 lg:left-5 lg:top-3"
+          >
+            *
+          </label>
+          <textarea
+            name="message"
+            cols="30"
+            rows="8"
+            placeholder="Votre message ici..."
+            className="px-6 py-2 lg:px-10 lg:py-4 rounded-lg w-full"
+            aria-required="true"
+            {...register("message")}
+          ></textarea>
+          {errors.message && (
+            <p className="sm:w-2/5 text-background m-auto text-center px-6 py-2 bg-red-500/50 rounded-md">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
 
         {!loadingMessage ? (
           <button
             type="submit"
             disabled={!isValid}
-            className={`${londrina.className} disabled:cursor-not-allowed tracking-wider bg-darkpurple text-background uppercase py-1 px-8 lg:py-2 lg:px-12 xl:py-4 xl:px-16 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
+            className={`${londrina.className} disabled:bg-darkpurple disabled:opacity-60 disabled:cursor-not-allowed tracking-wider bg-darkpurple text-background uppercase py-1 px-8 lg:py-2 lg:px-12 xl:py-4 xl:px-16 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
           >
             Envoyez
           </button>
