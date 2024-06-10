@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { jost } from "./fonts";
 import "./globals.css";
 import { WindowSizeProvider } from "./hooks/WindowSizeContext";
@@ -61,11 +62,34 @@ export const metadata = {
   robot: "index, follow",
 };
 
+const ScriptGoogle = () => {
+  return (
+    <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-E7BTPGZGRP"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E7BTPGZGRP');
+            `}
+      </Script>
+    </>
+  );
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <WindowSizeProvider>
-        <body className={jost.className}>{children}</body>
+        <body className={jost.className}>
+          {children}
+          <ScriptGoogle />
+        </body>
       </WindowSizeProvider>
     </html>
   );
