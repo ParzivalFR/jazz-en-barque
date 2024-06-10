@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useWindowSize } from "../hooks/WindowSizeContext";
 import BurgerMenu from "./BurgerMenu";
-import Back from "./Back";
 
 export default function Header({ src, className, width, height }) {
   const windowSizeContext = useWindowSize();
+  const router = useRouter();
 
   return (
     <header className="relative w-full">
@@ -25,13 +26,14 @@ export default function Header({ src, className, width, height }) {
             alt="Logo du festival Jazz En Barque"
             width={width}
             height={height}
-            className="w-40 sm:w-60 lg:w-80"
+            className="w-40 sm:w-60 lg:w-80 cursor-pointer"
             loading="lazy"
+            title="Logo du festival JEB et retour à l'accueil"
+            onClick={() => router.push("/")}
           />
         </div>
       </div>
       <div className="absolute top-6 right-10 lg:top-16 lg:right-24 flex gap-2 lg:gap-4 items-center">
-        <Back />
         <BurgerMenu />
       </div>
     </header>
