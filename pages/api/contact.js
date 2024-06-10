@@ -18,16 +18,16 @@ export default async (req, res) => {
   // Personnalisation du message en HTML pour toi
   const customMessage = `
   <html>
-    <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <body style="font-family: Arial, sans-serif; line-height: 1.2; color: #333;">
       <div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #7947FF; border-radius: 5px;">
         <h2>🍀 Nouveau message de <span style="color: #7947FF;">${name}</span></h2>
         <p style="font-size: 16px;">Vous avez reçu un nouveau message depuis votre formulaire de contact :</p>
         <table style="width: 100%;">
           <tr>
-            <td style="font-weight: bold; padding: 5px 0;">Nom : ${name}</td>
+            <td style="font-weight: bold; padding: 5px 0;">Nom : <span style="font-weight: normal;">${name}</span></td>
           </tr>
           <tr>
-            <td style="font-weight: bold; padding: 5px 0;">Email : ${email}</td>
+            <td style="font-weight: bold; padding: 5px 0;">Email : <span style="font-weight: normal;">${email}</span></td>
           </tr>
           <tr>
             <td style="font-weight: bold; padding: 5px 0;">Message :</td>
@@ -41,7 +41,7 @@ export default async (req, res) => {
           </tr>
         </table>
         <p style="margin-top: 20px;">Cordialement,</p>
-        <p style="margin: 0;">Votre site web</p>
+        <p style="margin: 0;">L'équipe Jazz En Barque.</p>
       </div>
     </body>
   </html>
