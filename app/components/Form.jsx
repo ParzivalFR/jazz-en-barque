@@ -142,7 +142,11 @@ const Form = () => {
             </p>
           )}
         </div>
-
+        <p className="text-[10px] italic bold text-center">
+          * Vos informations personnelles sont protégées. Les données collectées
+          ne seront ni divulguées, ni revendues à des tiers. Elles sont
+          utilisées uniquement pour répondre à vos demandes.
+        </p>
         {!loadingMessage ? (
           <button
             type="submit"
@@ -175,7 +179,6 @@ const Form = () => {
           )
         )}
       </form>
-      <div></div>
     </section>
   );
 };
