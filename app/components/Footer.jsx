@@ -17,6 +17,7 @@ const Footer = () => {
             href="https://www.gael-dev.fr/"
             target="_blank"
             className="font-bold hover:text-indigo-300 transition duration-500 ease-in-out"
+            title="Portfolio de Gael RICHARD"
           >
             Gael RICHARD
           </Link>

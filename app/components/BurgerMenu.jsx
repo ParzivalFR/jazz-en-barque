@@ -23,6 +23,7 @@ export default function BurgerMenu() {
           name="Open"
           onClick={toggle}
           className="z-20 border border-black text-black flex justify-center items-center h-auto px-2 rounded-full bg-background hover:bg-yellow transition-colors duration-500 ease-in-out"
+          title="Ouvrir le menu"
         >
           <IoIosMenu className="size-8 md:size-10" />
         </button>
@@ -34,6 +35,7 @@ export default function BurgerMenu() {
         <button
           aria-label="Close"
           className="absolute z-[910] top-6 right-6 lg:top-16 lg:right-24 text-5xl text-black cursor-pointer transition-transform duration-700 ease-in-out hover:rotate-180"
+          title="Fermer le menu"
           onClick={toggle}
         >
           <MdOutlineClose className="bg-background border border-black p-1 rounded-full size-10 lg:size-18 text-black" />
@@ -46,22 +48,39 @@ export default function BurgerMenu() {
               width={500}
               height={500}
               className="w-40 sm:w-52"
+              title="Logo de Jazz En Barque"
             />
           </div>
           <Spacing size={10} />
-          <MenuItem href="/" onClick={toggle}>
+          <MenuItem href="/" onClick={toggle} title="Page d'Accueil">
             Accueil
           </MenuItem>
-          <MenuItem href="/pages/informations" onClick={toggle}>
+          <MenuItem
+            href="/pages/informations"
+            onClick={toggle}
+            title="Page des Informations"
+          >
             Infos Pratiques
           </MenuItem>
-          <MenuItem href="/pages/history" onClick={toggle}>
+          <MenuItem
+            href="/pages/history"
+            onClick={toggle}
+            title="Page de notre Histoire"
+          >
             Notre Histoire
           </MenuItem>
-          <MenuItem href="/pages/previous" onClick={toggle}>
+          <MenuItem
+            href="/pages/previous"
+            onClick={toggle}
+            title="Page des Editions Précédentes"
+          >
             Editions Précédentes
           </MenuItem>
-          <MenuItem href="/pages/contact" onClick={toggle}>
+          <MenuItem
+            href="/pages/contact"
+            onClick={toggle}
+            title="Pas de contact"
+          >
             Contact
           </MenuItem>
         </MenuContainer>
@@ -96,10 +115,10 @@ function MenuContainer({ children }) {
   return <div className={style.container}>{children}</div>;
 }
 
-function MenuItem({ children, href, onClick }) {
+function MenuItem({ children, href, onClick, title }) {
   return (
     <div>
-      <Link href={href} className={style.item} onClick={onClick}>
+      <Link href={href} className={style.item} onClick={onClick} title={title}>
         {children}
       </Link>
     </div>

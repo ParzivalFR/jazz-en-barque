@@ -76,6 +76,7 @@ const PreviousGallery = () => {
               width={500}
               height={500}
               className="w-full h-full object-cover"
+              title={`image du festival numéro-${index}`}
               onClick={() => handleShow(img)}
             />
           </div>
