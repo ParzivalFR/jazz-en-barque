@@ -1,31 +1,36 @@
 "use client";
 
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { ThreeDots } from "react-loader-spinner";
+import * as yup from "yup";
 import { londrina } from "../fonts";
+
+// Schéma de validation Yup
+const contactSchema = yup.object().shape({
+  name: yup.string().required("Le nom est requis"),
+  email: yup.string().email("Email invalide").required("L'email est requis"),
+  message: yup.string().required("Le message est requis"),
+});
 
 const Form = () => {
   const [confirmeMessage, setConfirmeMessage] = useState(false);
   const [errorMesssage, setErrorMessage] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState(false);
 
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    reset,
+  } = useForm({
+    resolver: yupResolver(contactSchema),
+    mode: "onChange",
+  });
 
-  const handleSubit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
+  const onSubmit = async (data) => {
     setLoadingMessage(true);
-
-    if (!validateEmail(data.email)) {
-      setErrorMessage(true);
-      return;
-    }
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -38,7 +43,7 @@ const Form = () => {
     if (response.ok) {
       setLoadingMessage(false);
       setConfirmeMessage(true);
-      form.reset();
+      reset();
       setTimeout(() => {
         setConfirmeMessage(false);
       }, 5000);
@@ -55,19 +60,18 @@ const Form = () => {
     <section className="wave-background lg:bottom-48 z-[20] flex flex-col items-center gap-12 w-full h-auto bg-background pt-10 px-4">
       <div className="flex flex-col justify-center items-center gap-20">
         <h1
-          className={`${londrina.className} text-darkblue text-center text-4xl sm:text-6xl lg:text-8xl`}
+          className={`${londrina.className} text-darkblue text-center text-4xl sm:text-6xl lg:text-7xl`}
         >
           Contact
         </h1>
-        <p className="text-sm w-11/12 ">
+        <p className="text-sm md:text-base xl:text-lg w-11/12 sm:w-full ">
           Que ce soit à propos de l’évènement ou bien simplement nous saluer,
           n’hésitez pas à nous contacter :
         </p>
       </div>
       <form
-        method="post"
-        className=" relative w-11/12 md:max-w-[600px] flex flex-col justify-center items-center gap-4"
-        onSubmit={handleSubit}
+        onSubmit={handleSubmit(onSubmit)}
+        className="relative w-11/12 md:max-w-[600px] flex flex-col justify-center items-center gap-4"
       >
         <label
           htmlFor="name"
@@ -79,12 +83,17 @@ const Form = () => {
         <input
           type="text"
           name="name"
-          id="name"
           placeholder="Entrez votre Nom et Prénom"
           className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
           aria-required="true"
-          required
+          {...register("name")}
         />
+        {errors.name && (
+          <p className="text-background px-6 py-2 bg-red-500/50 rounded-md">
+            {errors.name.message}
+          </p>
+        )}
+
         <label
           htmlFor="email"
           aria-label="email"
@@ -95,12 +104,17 @@ const Form = () => {
         <input
           type="email"
           name="email"
-          id="email"
           placeholder="Entrez votre adresse email"
           className="px-8 py-1 lg:px-10 lg:py-3 rounded-full w-full"
-          required
           aria-required="true"
+          {...register("email")}
         />
+        {errors.email && (
+          <p className="text-background px-6 py-2 bg-red-500/50 rounded-md">
+            {errors.email.message}
+          </p>
+        )}
+
         <label
           htmlFor="message"
           aria-label="message"
@@ -110,28 +124,35 @@ const Form = () => {
         </label>
         <textarea
           name="message"
-          id="message"
           cols="30"
           rows="8"
           placeholder="Votre message ici..."
           className="px-6 py-2 lg:px-10 lg:py-4 rounded-lg w-full"
-          required
           aria-required="true"
+          {...register("message")}
         ></textarea>
+        {errors.message && (
+          <p className="text-background px-6 py-2 bg-red-500/50 rounded-md">
+            {errors.message.message}
+          </p>
+        )}
+
         {!loadingMessage ? (
           <button
             type="submit"
-            className={`${londrina.className} tracking-wider bg-darkpurple text-white uppercase py-1 px-8 lg:py-2 lg:px-12 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
+            disabled={!isValid}
+            className={`${londrina.className} disabled:cursor-not-allowed tracking-wider bg-darkpurple text-background uppercase py-1 px-8 lg:py-2 lg:px-12 xl:py-4 xl:px-16 rounded-full transition hover:bg-darkpurple hover:opacity-75 hover:scale-[0.98] duration-500 ease-in-out`}
           >
             Envoyez
           </button>
         ) : null}
+
         {confirmeMessage ? (
-          <p className="text-white animate-bounce px-6 py-2 bg-green-500/50 rounded-md">
+          <p className="text-background animate-bounce px-6 py-2 bg-green-500/50 rounded-md">
             Message envoyé avec succès
           </p>
         ) : errorMesssage ? (
-          <p className="text-white animate-bounce px-6 py-2 bg-red-500/50 rounded-md">
+          <p className="text-background animate-bounce px-6 py-2 bg-red-500/50 rounded-md">
             Erreur lors de l'envoi du message
           </p>
         ) : (

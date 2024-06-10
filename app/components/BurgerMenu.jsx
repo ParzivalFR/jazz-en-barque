@@ -73,7 +73,7 @@ export default function BurgerMenu() {
 /* Logic */
 const style = {
   container: `flex flex-col gap-8 relative top-10 w-full text-start px-4 md:px-8 lg:px-12 xl:px-20 z-[900]`,
-  item: `px-4 md:px-10 text-3xl text-white cursor-pointer transition hover:text-yellow duration-700 ease-in-out ${londrina.className}`,
+  item: `px-4 md:px-10 text-3xl text-background cursor-pointer transition hover:text-yellow duration-700 ease-in-out ${londrina.className}`,
   menu: {
     open: `h-svh w-full`,
     close: `w-0 h-svh`,

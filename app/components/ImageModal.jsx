@@ -15,7 +15,7 @@ const ImageModal = ({ imageUrl, onClose, onPrevious, onNext }) => {
           className="object-cover max-w-full max-h-full lg:size-4/5 m-auto rounded-lg"
         />
         <button
-          className="absolute top-2 right-2 text-white text-5xl transition-transform hover:rotate-180 duration-500 "
+          className="absolute top-2 right-2 text-background text-5xl transition-transform hover:rotate-180 duration-500 "
           onClick={onClose}
         >
           <IoClose size={40} />

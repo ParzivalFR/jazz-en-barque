@@ -23,7 +23,7 @@ const Program = () => {
       time: "17:00",
       title: "Lancement de la parade",
       description: (
-        <IoMdMusicalNote className="text-md rotate-12 text-white lg:text-4xl " />
+        <IoMdMusicalNote className="text-md rotate-12 text-background lg:text-4xl " />
       ),
     },
     {
@@ -51,7 +51,7 @@ const Program = () => {
       time: "20:30",
       title: "Concert",
       description: (
-        <IoMdMusicalNote className="text-md -rotate-45 text-white lg:text-4xl " />
+        <IoMdMusicalNote className="text-md -rotate-45 text-background lg:text-4xl " />
       ),
     },
     {
@@ -59,7 +59,7 @@ const Program = () => {
       time: "22:30",
       title: "Dancefloor avec Dj",
       description: (
-        <IoMdMusicalNote className="text-md rotate-45 text-white lg:text-4xl " />
+        <IoMdMusicalNote className="text-md rotate-45 text-background lg:text-4xl " />
       ),
     },
   ];
@@ -85,7 +85,7 @@ const Program = () => {
               <Image src={item.icon} alt={item.title} className="w-8 lg:w-12" />
               <time
                 dateTime={item.time}
-                className={`text-lg text-white font-bold lg:text-3xl ml-4 ${londrina.className}`}
+                className={`text-lg text-background font-bold lg:text-3xl ml-4 ${londrina.className}`}
               >
                 {item.time}
               </time>
