@@ -78,6 +78,11 @@ const ScriptGoogle = () => {
               gtag('config', 'G-E7BTPGZGRP');
             `}
       </Script>
+      <Script
+        defer
+        data-domain="jazz-en-barque.vercel.app"
+        src="https://plausible.gael-dev.fr/js/script.js"
+      />
     </>
   );
 };
